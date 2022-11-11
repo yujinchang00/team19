@@ -1,31 +1,52 @@
+/* -------------------- div -------------------- */
 .div_mainbar{
     display: flex;
     /* align-items: center; */
 }
+
 .div_logo{
     margin-left: 2%;
 }
+
 .div_category{  /* 아래로 정렬 */
     margin: auto 0 0 2%;
-    /* margin-left: 3%; */
 }
+
 .div_img{
     margin: auto 2% 0 auto;
 }
-.hr_logo{
-    width: 250px;
-    height: 2px;
-    background-color: #00462A;
-    color: #00462A;
-    border: 0;
+
+.div_otttype_section {
+    width: 100%;
+    height: 280px;
+    background-color: #F0F0F0;
+    margin: 20px 0 20px 0;
 }
-.h1_logo{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-style: italic;
-    color: #00462A;
+
+.div_ott_select {
+    width: 96%;
+    height: 250px;
+    margin: 0px auto 0px auto;
     text-align: center;
-    line-height: 10px;
+    display: flex;
 }
+
+.div_horizontal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.div_favor_list {
+    width: 96%;
+    height: 250px;
+    margin: 0px auto 0px auto;
+    text-align: center;
+    display: flex;
+}
+
+/* -------------------- nav -------------------- */
+
 nav{
     font-size: 12pt;
     font-family: Georgia, 'PT Sans', Arial, Sans-serif;
@@ -55,6 +76,7 @@ nav a:hover, nav a:active{
 nav a#pull{
     display: none;
 }
+
 html {
 -webkit-touch-callout:none;
 -webkit-user-select:none;
@@ -93,6 +115,16 @@ background-color: white;color: rgb(192, 35, 35);
 position: absolute;z-index: 1;
 }
 
+/* -------------------- hr -------------------- */
+
+.hr_logo{
+    width: 250px;
+    height: 2px;
+    background-color: #00462A;
+    color: #00462A;
+    border: 0;
+}
+
 .hr_division {
     width: 96%;
     height: 2px;
@@ -101,13 +133,21 @@ position: absolute;z-index: 1;
     border: 0;
 }
 
-.div_ott_type {
-    width: 100%;
-    height: 250px;
-    background-color: #F0F0F0;
+/* -------------------- text -------------------- */
+
+.text_logo{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: #00462A;
+    text-align: center;
+    line-height: 10px;
 }
 
-.h2_text {
+.text_green {
+    color: #00462A;
+}
+
+.text_green_h2 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: italic;
     color: #00462A;
@@ -115,3 +155,42 @@ position: absolute;z-index: 1;
     padding: 30px;
     margin-left: 20px;
 }
+
+/* -------------------- img -------------------- */
+
+.img_ott_select {
+    width: 300px;
+    height: 160px;
+    margin-left: 20px;
+    margin-right: 20px;
+    flex: 1;
+}
+
+.img_favor_list {
+    width: 344px;
+    height: 220px;
+    margin-left: 10px;
+    margin-right: 10px;
+    flex: 1;
+}
+
+/* -------------------- btn -------------------- */
+
+.btn_submit {
+    width: 150px;
+    height: 45px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: normal;
+    color: #00462A;
+    font-size: 25px;
+    background-color: #E5ECEA;
+    border-radius: 0.2em;
+    border-color: #00462A;
+    border-width: 3px;
+    margin-right: 50px;
+}
+
+
+
+
+

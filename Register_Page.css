@@ -1,53 +1,57 @@
 /* -------------------- div -------------------- */
 .div_mainbar{
     display: flex;
+    /* align-items: center; */
 }
 
 .div_logo{
     margin-left: 2%;
+    margin-bottom: 40px;
 }
 
 .div_category{  /* 아래로 정렬 */
     margin: auto 0 0 2%;
+    /* margin-left: 3%; */
 }
 
 .div_img{
     margin: auto 2% 0 auto;
 }
 
-.div_button {
-    width:96%; 
-    height: 190px; 
-    background-color: #F7F7F7;
+.div_login_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    height: 100%;
+}
+
+.div_login_section {
+    width: 26%;
+    height: 85%;
+    background-color: white;
     border-radius: 1em;
-    margin: 20px auto 20px auto;
-}
-
-.div_center {
+    border: 4px solid #A8A8A8;
     text-align: center;
+    overflow:scroll;
 }
 
-/* 2개의 컴포넌트를 양쪽에 배치 */
+.div_login_section::-webkit-scrollbar {
+    display: none;
+}
+
+.div_input {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 .div_horizontal {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 0 15% 0 15%;
 }
-
-.div_movie_list {
-    width: 96%;
-    height: 250px;
-    overflow: auto;
-    white-space: nowrap;
-    margin: 20px auto 20px auto;
-    display: flex;
-}
-
-/* 스크롤바 없애기 */
-.div_movie_list::-webkit-scrollbar {
-    display: none;
-}
-
 
 /* -------------------- nav -------------------- */
 
@@ -129,8 +133,8 @@ position: absolute;z-index: 1;
 }
 
 .hr_division {
-    width: 96%;
-    height: 2px;
+    width: 100%;
+    height: 6px;
     background-color: #DEDEDE;
     color: #DEDEDE;
     border: 0;
@@ -146,55 +150,88 @@ position: absolute;z-index: 1;
     line-height: 10px;
 }
 
+.h2_text_gray {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: #656565;
+    line-height: 10px;
+    text-align: center;
+    margin: 50px 0 30px 0;
+}
+
 .h2_text {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: italic;
     color: #00462A;
-    line-height: 10px;
-    padding: 30px;
-    margin: 0;
+    /* line-height: 10px; */
+    font-size: 12px;
+    text-align: left;
+    margin: 30px 0 30px 0;
 }
 
-.text_green {
-    color: #00462A;
-}
-
-/* -------------------- btn -------------------- */
-
-.btn_select {
-    width: 260px;
-    height: 100px;
+.p_text_gray {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: italic;
-    color: #00462A;
-    font-size: 20px;
-    background-color: #E5ECEA;
-    border-radius: 1em;
-    border: 0;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-/* -------------------- select -------------------- */
-
-.select_decade {
-    width: 140px;
-    height: 30px;
-    float: right;
-    border-radius: 2px;
-    text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #00462A;
-    border: 0;
-    margin: 0 40px 0 0;
+    font-size: smaller;
+    color: #656565;
+    line-height: 10px;
+    margin: 10px 0 10px 0;
 }
 
 /* -------------------- img -------------------- */
 
-.img_movie_list {
-    width: 344px;
-    height: 220px;
-    display: inline-block;
-    margin-left: 20px;
-    flex: 1;
+.img_btn_close {
+    width: 30px;
+    height: 30px;
+    margin: 20px 20px 40px 0 ;
+    float: right;
 }
+
+/* -------------------- imput -------------------- */
+
+.input_login {
+    width: 200px;
+    height: 30px;
+    border-radius: 7px;
+    border-width: 3px;
+    border-color: #00462A;
+    text-align: center;
+}
+
+/* -------------------- btn -------------------- */
+
+.btn_login {
+    width: 70%;
+    height: 50px;
+    margin: 20px 0 20px 0;
+    background-color: #00462A;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 25px;
+    color: white;
+    border-radius: 7px;
+}
+
+
+/* 로그인 페이지에서 height의 %가 적용되게 하는 부분 */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

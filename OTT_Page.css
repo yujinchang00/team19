@@ -1,53 +1,37 @@
 /* -------------------- div -------------------- */
 .div_mainbar{
     display: flex;
+    /* align-items: center; */
 }
-
 .div_logo{
     margin-left: 2%;
 }
-
 .div_category{  /* 아래로 정렬 */
     margin: auto 0 0 2%;
+    /* margin-left: 3%; */
 }
-
 .div_img{
     margin: auto 2% 0 auto;
 }
 
-.div_button {
-    width:96%; 
-    height: 190px; 
-    background-color: #F7F7F7;
-    border-radius: 1em;
-    margin: 20px auto 20px auto;
-}
-
-.div_center {
-    text-align: center;
-}
-
-/* 2개의 컴포넌트를 양쪽에 배치 */
-.div_horizontal {
-    display: flex;
+.div_ott_section {
+    width: 100%;
+    background-color: #00462A;
+    margin: 20px 0 20px 0;
     align-items: center;
-    justify-content: space-between;
 }
 
-.div_movie_list {
+.div_ottmovie_section {
+    margin-top: 50px;
+}
+
+.div_favor_list {
     width: 96%;
     height: 250px;
-    overflow: auto;
-    white-space: nowrap;
-    margin: 20px auto 20px auto;
+    margin: 0px auto 0px auto;
+    text-align: center;
     display: flex;
 }
-
-/* 스크롤바 없애기 */
-.div_movie_list::-webkit-scrollbar {
-    display: none;
-}
-
 
 /* -------------------- nav -------------------- */
 
@@ -138,7 +122,7 @@ position: absolute;z-index: 1;
 
 /* -------------------- text -------------------- */
 
-.h1_logo{
+.text_logo{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: italic;
     color: #00462A;
@@ -146,55 +130,27 @@ position: absolute;z-index: 1;
     line-height: 10px;
 }
 
-.h2_text {
+.text_subtitle {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: italic;
-    color: #00462A;
-    line-height: 10px;
-    padding: 30px;
-    margin: 0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    margin-left: 20px;
 }
 
 .text_green {
     color: #00462A;
 }
 
-/* -------------------- btn -------------------- */
-
-.btn_select {
-    width: 260px;
-    height: 100px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-style: italic;
-    color: #00462A;
-    font-size: 20px;
-    background-color: #E5ECEA;
-    border-radius: 1em;
-    border: 0;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-/* -------------------- select -------------------- */
-
-.select_decade {
-    width: 140px;
-    height: 30px;
-    float: right;
-    border-radius: 2px;
-    text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #00462A;
-    border: 0;
-    margin: 0 40px 0 0;
-}
-
 /* -------------------- img -------------------- */
 
-.img_movie_list {
+.img_favor_list {
     width: 344px;
     height: 220px;
-    display: inline-block;
-    margin-left: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
     flex: 1;
 }
+
+
