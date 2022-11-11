@@ -7,34 +7,35 @@
     <link href="Season_Page.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
+    <!-- 메인바 -->
     <div class="div_mainbar">
         <div class="div_logo">
-        <hr class="hr_logo">
-        <h1 class="h1_logo">WHO's TT</h1>
-        <hr class="hr_logo">
+            <hr class="hr_logo">
+            <h1 class="h1_logo">WHO's TT</h1>
+            <hr class="hr_logo">
         </div>
         <div class="div_category">
-        <nav class="clearfix">
-            <ul class="clearfix">
-                <li><a class="text_green" href="">SEASONS</a></li>
-                <li><a href="">OTT SERVICE</a></li>
-                <li><a href="">GENRE</a></li>
-                <li><a href="">EVENT</a></li>
-                <li><a href="">COMMUNITY</a></li>
-                <li><a href="">KOREAN ACTOR</a></li>
-            </ul>
-        </nav>
+            <nav class="clearfix">
+                <ul class="clearfix">
+                    <li><a class="text_green" href="">SEASONS</a></li>
+                    <li><a href="">OTT SERVICE</a></li>
+                    <li><a href="">GENRE</a></li>
+                    <li><a href="">EVENT</a></li>
+                    <li><a href="">COMMUNITY</a></li>
+                    <li><a href="">KOREAN ACTOR</a></li>
+                </ul>
+            </nav>
         </div>
         <div class="div_img">
-        <img src="images/alarm.png" alt="alarm" width="30px" height="30px">
-        <img src="images/user.png" alt="alarm" width="30px" height="30px">
+            <img src="images/alarm.png" alt="alarm" width="30px" height="30px">
+            <img src="images/user.png" alt="alarm" width="30px" height="30px">
         </div>
     </div>
 
     <hr class="hr_division">
 
+    <!-- 사용자가 원하는 연도 및 decade를 설정하는 section -->
     <div class="div_button">
-
         <div class="div_horizontal">
             <h2 class="h2_text">WHAT SEASON DO YOU WANT?</h2>
             <select class="select_decade" name="">
@@ -54,55 +55,63 @@
 
     <hr class="hr_division">
 
-    <!-- for문 사용 -->
-    <div class="div_movie_section">
-
-        <div class="div_horizontal">
-            <h2 class="h2_text">~ 1990</h2>
-            <h2 class="h2_text">23개</h2>
-        </div>
-        
-        <div class="div_movie_list">
-            <img class="img_movie_list" src="images/movie1.png" alt="My Image">
-            <img class="img_movie_list" src="images/movie2.png" alt="My Image">
-            <img class="img_movie_list" src="images/movie3.png" alt="My Image">
-            <img class="img_movie_list" src="images/movie4.png" alt="My Image">
-            <img class="img_movie_list" src="images/movie3.png" alt="My Image">
-        </div>
+    <!-- 연도별 영화 이미지 포스터 및 개수를 보여주는 section -->
+    <div class="div_horizontal">
+        <h2 class="h2_text">~ 1990</h2>
+        <!-- 
+            데이터: 연도별 영화 개수
+            테이블, 필드값: ex. image TABLE, image_url
+            데이터가 들어갈 위치: <h2 class="h2_text">[실제 데이터]개</h2>
+            비고: X
+        -->
+        <h2 class="h2_text">23개</h2>
     </div>
 
-    <div class="div_movie_section">
-        
-        <div class="div_horizontal">
-            <h2 class="h2_text">1991 ~ 2000</h2>
-            <h2 class="h2_text">19개</h2>
-        </div>
-        
-        <div class="div_movie_list">
-            <img class="img_movie_list" src="images/movie1.png" alt="My Image">
-            <img class="img_movie_list" src="images/movie2.png" alt="My Image">
-            <img class="img_movie_list" src="images/movie3.png" alt="My Image">
-            <img class="img_movie_list" src="images/movie4.png" alt="My Image">
-            <img class="img_movie_list" src="images/movie3.png" alt="My Image">
-        </div>
+    <!-- 
+        데이터: 장르별 영화 포스터 이미지
+        테이블, 필드값: ex. image TABLE, image_url
+        데이터가 들어갈 위치: <img class="img_movie_list" src="[실제 데이터]" alt="My Image">
+        비고: [반복문] 하나의 div에 img 제한 X, 아래 코드는 5개의 데이터일 경우
+    -->
+    <div class="div_movie_list">
+        <img class="img_movie_list" src="images/movie1.png" alt="My Image">
+        <img class="img_movie_list" src="images/movie2.png" alt="My Image">
+        <img class="img_movie_list" src="images/movie3.png" alt="My Image">
+        <img class="img_movie_list" src="images/movie4.png" alt="My Image">
+        <img class="img_movie_list" src="images/movie3.png" alt="My Image">
+    </div>
+    <!-- =================== 반복문 end ================== -->
+
+
+    <!-- 연도별(1991~2000) 영화 포스터 및 개수를 보여주는 section -->
+    <!-- 이하 동일 -->
+    <div class="div_horizontal">
+        <h2 class="h2_text">1991 ~ 2000</h2>
+        <h2 class="h2_text">19개</h2>
+    </div>
+    
+    <div class="div_movie_list">
+        <img class="img_movie_list" src="images/movie1.png" alt="My Image">
+        <img class="img_movie_list" src="images/movie2.png" alt="My Image">
+        <img class="img_movie_list" src="images/movie3.png" alt="My Image">
+        <img class="img_movie_list" src="images/movie4.png" alt="My Image">
+        <img class="img_movie_list" src="images/movie3.png" alt="My Image">
     </div>
 
-    <div class="div_movie_section">
-        
-        <div class="div_horizontal">
-            <h2 class="h2_text">2001 ~ 2010</h2>
-            <h2 class="h2_text">22개</h2>
-        </div>
-        
-        <div class="div_movie_list">
-            <img class="img_movie_list" src="images/movie1.png" alt="My Image">
-            <img class="img_movie_list" src="images/movie2.png" alt="My Image">
-            <img class="img_movie_list" src="images/movie3.png" alt="My Image">
-            <img class="img_movie_list" src="images/movie4.png" alt="My Image">
-            <img class="img_movie_list" src="images/movie3.png" alt="My Image">
-        </div>
+    <!-- 연도별(2001~2010) 영화 포스터 및 개수를 보여주는 section -->
+    <!-- 이하 동일 -->
+    <div class="div_horizontal">
+        <h2 class="h2_text">2001 ~ 2010</h2>
+        <h2 class="h2_text">22개</h2>
     </div>
-
+    
+    <div class="div_movie_list">
+        <img class="img_movie_list" src="images/movie1.png" alt="My Image">
+        <img class="img_movie_list" src="images/movie2.png" alt="My Image">
+        <img class="img_movie_list" src="images/movie3.png" alt="My Image">
+        <img class="img_movie_list" src="images/movie4.png" alt="My Image">
+        <img class="img_movie_list" src="images/movie3.png" alt="My Image">
+    </div>
 
 </body>
 </html>

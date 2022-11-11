@@ -7,6 +7,7 @@
     <link href="Favor_Page.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
+    <!-- 메인바 -->
     <div class="div_mainbar">
 
         <div class="div_logo">
@@ -37,6 +38,7 @@
     
     <hr class="hr_division">
 
+    <!-- OTT 선택하는 section -->
     <div class="div_otttype_section">
         
         <h2 class="text_green_h2">MOVIES PER OTT TYPE</h2>
@@ -52,11 +54,18 @@
 
     <hr class="hr_division">
 
+    <!-- 사용자가 선호하는 영화를 선택하는 section -->
     <div class="div_horizontal">
         <h2 class="text_green_h2">WHAT WOULD YOU LIKE TO SEE?</h2>
         <button class="btn_submit">SUBMIT</button>
     </div>
 
+    <!-- 
+        데이터: 영화 포스터 이미지
+        테이블, 필드값: ex. image TABLE, image_url
+        데이터가 들어갈 위치: <img class="img_favor_list" src="[실제 데이터]" alt="My Image">
+        비고: [반복문] 하나의 div마다 img가 최대 4개 포함, 아래 코드는 12개의 데이터일 경우
+     -->
     <div class="div_favor_list">
         <img class="img_favor_list" src="images/movie1.png" alt="My Image">
         <img class="img_favor_list" src="images/movie2.png" alt="My Image">
@@ -77,13 +86,7 @@
         <img class="img_favor_list" src="images/movie3.png" alt="My Image">
         <img class="img_favor_list" src="images/movie1.png" alt="My Image">
     </div>
-
-    <div class="div_favor_list">
-        <img class="img_favor_list" src="images/movie1.png" alt="My Image">
-        <img class="img_favor_list" src="images/movie2.png" alt="My Image">
-        <img class="img_favor_list" src="images/movie3.png" alt="My Image">
-        <img class="img_favor_list" src="images/movie1.png" alt="My Image">
-    </div>
+    <!-- =================== 반복문 end ================== -->
 
 </body>
 </html>

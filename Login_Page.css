@@ -35,6 +35,11 @@
     text-align: center;
 }
 
+/* 화면에 스크롤바 제거 */
+.div_login_section::-webkit-scrollbar {
+    display: none;
+}
+
 .div_horizontal {
     display: flex;
     align-items: center;

@@ -198,3 +198,8 @@ position: absolute;z-index: 1;
     margin-left: 20px;
     flex: 1;
 }
+
+/* 전체 화면에 스크롤바 제거 */
+.html, body::-webkit-scrollbar {
+    display: none;
+}

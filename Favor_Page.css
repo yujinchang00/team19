@@ -20,7 +20,7 @@
     width: 100%;
     height: 280px;
     background-color: #F0F0F0;
-    margin: 20px 0 20px 0;
+    padding: 20px 0 20px 0;
 }
 
 .div_ott_select {
@@ -190,7 +190,9 @@ position: absolute;z-index: 1;
     margin-right: 50px;
 }
 
-
-
+/* 전체 화면에 스크롤바 제거 */
+.html, body::-webkit-scrollbar {
+    display: none;
+}
 
 
