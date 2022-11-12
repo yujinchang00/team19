@@ -12,6 +12,10 @@
 .div_img{
     margin: auto 2% 0 auto;
 }
+/*  */
+test {
+    width: 10px;
+}
 .hr_logo{
     width: 250px;
     height: 2px;
