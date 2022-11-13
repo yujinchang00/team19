@@ -36,6 +36,27 @@
     display: flex;
 }
 
+/* 2개의 컴포넌트를 양쪽에 배치 */
+.div_horizontal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 15% 0 15%;
+}
+
+.div_login {
+    width: 300px;
+    height: 120px;
+    background-color: #F2F6F4;
+    position: absolute;
+    right: 3%;
+    border: 3px solid #66907F;
+    border-radius: 3%;
+    margin-top: 10px;
+    display: none;
+}
+
+
 /* -------------------- nav -------------------- */
 
 nav{
@@ -123,6 +144,14 @@ position: absolute;z-index: 1;
     border: 0;
 }
 
+.hr_login_division {
+    width: 96%;
+    height: 2px;
+    background-color: #66907F;
+    color: #66907F;
+    border: 0;
+}
+
 /* -------------------- text -------------------- */
 
 .text_logo{
@@ -173,6 +202,42 @@ position: absolute;z-index: 1;
     margin: 0;
 }
 
+.text_login {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-size: 18px;
+    color: #66907F;
+    text-align: center;
+}
+
+.text_gray {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: #656565;
+    line-height: 10px;
+    text-align: center;
+    margin: 50px 0 30px 0;
+}
+
+.text_green2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: #00462A;
+    line-height: 10px;
+    text-align: center;
+    margin: 30px 0 30px 0;
+}
+
+.text_gray_p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: smaller;
+    color: #656565;
+    line-height: 10px;
+    margin: 10px 0 10px 0;
+}
+
+
 /* -------------------- img -------------------- */
 
 .img_rank_list {
@@ -183,10 +248,103 @@ position: absolute;z-index: 1;
     transition: 0.8s;
 }
 .img_rank_list:hover {
-    filter: brightness(0.6);
+    filter: brightness(0.5);
+}
+
+.img_btn_close {
+    width: 30px;
+    height: 30px;
+    margin: 20px 20px 40px 0 ;
+    float: right;
+}
+
+
+/* -------------------- btn -------------------- */
+
+.btn_login {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-size: 18px;
+    color: #66907F;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    margin-top: 5px;
+    border: 2px solid #66907F;
+    border-color: #66907F;
+    border-radius: 5%;
+    background-color: #F2F6F4;
+}
+
+.btn_login_modal {
+    width: 70%;
+    height: 50px;
+    margin: 20px 0 20px 0;
+    background-color: #00462A;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 25px;
+    color: white;
+    border-radius: 7px;
+    transition: 0.3s;
+}
+.btn_login_.modal:hover {
+    color: #00462A;
+    background-color: #E5ECEA;
+    border-color: #E5ECEA;
+}
+
+.btn_user {
+    border: none;
+    background: none;
+}
+
+/* -------------------- input -------------------- */
+
+.input_login {
+    width: 200px;
+    height: 30px;
+    border-radius: 7px;
+    border-width: 3px;
+    border-color: #00462A;
+    text-align: center;
 }
 
 /* 전체 화면에 스크롤바 제거 */
 .html, body::-webkit-scrollbar {
     display: none;
 }
+
+/* 팝업 스타일 */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal .bg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .modalBox {
+    position: absolute;
+    background-color: #fff;
+    width: 26%;
+    height: 85%;
+    padding: 15px;
+  }
+
+  .modalBox button {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .hidden {
+    display: none;
+  }

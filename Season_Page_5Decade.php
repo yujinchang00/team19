@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Season_Page</title>
-    <link href="Season_Page.css?after" rel="stylesheet" type="text/css" />
+    <title>Season_Page_5Decade</title>
+    <link href="Season_Page_5Decade.css?after" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <!-- 메인바 -->
@@ -49,10 +49,15 @@
 
         <div class="div_center">
             <button class="btn_select">~ 1990</button>
-            <button class="btn_select">1991 ~ 2000</button>
-            <button class="btn_select">2001 ~ 2010</button>
-            <button class="btn_select">2011 ~ 2020</button>
-            <button class="btn_select">2021 ~</button>
+            <button class="btn_select">1991 ~ 1995</button>
+            <button class="btn_select">1996 ~ 2000</button>
+            <button class="btn_select">2001 ~ 2005</button>
+        </div>
+        <div class="div_center">
+            <button class="btn_select">2006 ~ 2010</button>
+            <button class="btn_select">2011~ 2015</button>
+            <button class="btn_select">2016 ~ 2020</button>
+            <button class="btn_select">2021 ~ </button>
         </div>
     </div>
 
@@ -105,7 +110,7 @@
     <!-- 이하 동일 -->
     <div class="div_horizontal2">
         <div class="div_horizontal">
-            <h2 class="h2_text">1991 ~ 2000</h2>
+            <h2 class="h2_text">1991 ~ 1995</h2>
             <h2 class="h2_text">19개</h2>
         </div>
     </div>
@@ -122,7 +127,7 @@
     <!-- 이하 동일 -->
     <div class="div_horizontal3">
         <div class="div_horizontal">
-            <h2 class="h2_text">2001 ~ 2010</h2>
+            <h2 class="h2_text">1996 ~ 2000</h2>
             <h2 class="h2_text">29개</h2>
         </div>
     </div>
@@ -139,7 +144,7 @@
     <!-- 이하 동일 -->
     <div class="div_horizontal4">
         <div class="div_horizontal">
-            <h2 class="h2_text">2011 ~ 2020</h2>
+            <h2 class="h2_text">2001 ~ 2005</h2>
             <h2 class="h2_text">29개</h2>
         </div>
     </div>
@@ -155,6 +160,57 @@
     <!-- 연도별(2001~2010) 영화 포스터 및 개수를 보여주는 section -->
     <!-- 이하 동일 -->
     <div class="div_horizontal5">
+        <div class="div_horizontal">
+            <h2 class="h2_text">2006 ~ 2010</h2>
+            <h2 class="h2_text">29개</h2>
+        </div>
+    </div>
+    
+    <div class="div_movie_list">
+        <img class="img_movie_list" src="images/movie1.png" alt="My Image">
+        <img class="img_movie_list" src="images/movie2.png" alt="My Image">
+        <img class="img_movie_list" src="images/movie3.png" alt="My Image">
+        <img class="img_movie_list" src="images/movie4.png" alt="My Image">
+        <img class="img_movie_list" src="images/movie3.png" alt="My Image">
+    </div>
+
+    <!-- 연도별(2001~2010) 영화 포스터 및 개수를 보여주는 section -->
+    <!-- 이하 동일 -->
+    <div class="div_horizontal6">
+        <div class="div_horizontal">
+            <h2 class="h2_text">2011 ~ 2015</h2>
+            <h2 class="h2_text">29개</h2>
+        </div>
+    </div>
+    
+    <div class="div_movie_list">
+        <img class="img_movie_list" src="images/movie1.png" alt="My Image">
+        <img class="img_movie_list" src="images/movie2.png" alt="My Image">
+        <img class="img_movie_list" src="images/movie3.png" alt="My Image">
+        <img class="img_movie_list" src="images/movie4.png" alt="My Image">
+        <img class="img_movie_list" src="images/movie3.png" alt="My Image">
+    </div>
+
+    <!-- 연도별(2001~2010) 영화 포스터 및 개수를 보여주는 section -->
+    <!-- 이하 동일 -->
+    <div class="div_horizontal7">
+        <div class="div_horizontal">
+            <h2 class="h2_text">2016 ~ 2020</h2>
+            <h2 class="h2_text">29개</h2>
+        </div>
+    </div>
+    
+    <div class="div_movie_list">
+        <img class="img_movie_list" src="images/movie1.png" alt="My Image">
+        <img class="img_movie_list" src="images/movie2.png" alt="My Image">
+        <img class="img_movie_list" src="images/movie3.png" alt="My Image">
+        <img class="img_movie_list" src="images/movie4.png" alt="My Image">
+        <img class="img_movie_list" src="images/movie3.png" alt="My Image">
+    </div>
+
+    <!-- 연도별(2001~2010) 영화 포스터 및 개수를 보여주는 section -->
+    <!-- 이하 동일 -->
+    <div class="div_horizontal8">
         <div class="div_horizontal">
             <h2 class="h2_text">2021 ~</h2>
             <h2 class="h2_text">29개</h2>

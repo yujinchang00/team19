@@ -4,25 +4,25 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Genre_Page</title>
-    <link href="Genre_Page.css" rel="stylesheet" type="text/css" />
+    <link href="Genre_Page.css?ver=1.0" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <!-- 메인바 -->
     <div class="div_mainbar">
         <div class="div_logo">
         <hr class="hr_logo">
-        <h1 class="text_logo">WHO's TT</h1>
+        <h1 class="text_logo" onclick="location.href='Main_Page.php'">WHO's TT</h1>
         <hr class="hr_logo">
         </div>
         <div class="div_category">
         <nav class="clearfix">
             <ul class="clearfix">
-                <li><a href="">SEASONS</a></li>
-                <li><a href="">OTT SERVICE</a></li>
-                <li><a class="text_green" href="">GENRE</a></li>
-                <li><a href="">EVENT</a></li>
-                <li><a href="">COMMUNITY</a></li>
-                <li><a href="">KOREAN ACTOR</a></li>
+                <li><a onclick="location.href='Season_Page.php'">SEASONS</a></li>
+                <li><a onclick="location.href='Favor_Page.php'">OTT SERVICE</a></li>
+                <li><a class="text_green" onclick="location.href='Genre_Page.php'">GENRE</a></li>
+                <li><a onclick="location.href='Event_Page_autoscroll.php'">EVENT</a></li>
+                <li><a onclick="location.href=''">COMMUNITY</a></li>
+                <li><a onclick="location.href='Actor_Page.php'">KOREAN ACTOR</a></li>
             </ul>
         </nav>
         </div>
@@ -36,7 +36,7 @@
 
     <!-- 장르를 선택하는 section -->
     <div class="div_button">
-        <h2 class="text_green_h2">WHAT SEASON DO YOU WANT?</h2>
+        <h2 class="text_green_h2">WHAT GENRE DO YOU WANT?</h2>
 
         <div class="div_center">
             <button class="btn_select">Action & Adventure</button>
