@@ -85,7 +85,7 @@ include './basic_php_files/mysql_connect.php';
             $line_changer=0;
             $checked_arr = array();
             
-            $sql = 'select mid from movies_ott';
+            $sql = 'select * from movies_ott';
             $mid_list_all = mysqli_query($mysqli, $sql);
 
             while($movie=mysqli_fetch_array($mid_list_all,MYSQLI_ASSOC)){
@@ -97,7 +97,7 @@ include './basic_php_files/mysql_connect.php';
                 echo '
                 <div class="div_favor_list_chk">
                     <img class="img_favor_list" src="' . $f_src_img['img_src'] .'" alt="My Image">
-                    <p class="text_detail">상세보기</p>
+                    <p class="text_detail">'. $movie['overview'].'</p>
                     <label for="'. $mid .'" class="chk_box">
                         <input type="checkbox" name="fav_mids[]" value="'. $mid . '"id="'. $mid .'"/>
                         <span class="on"></span>
