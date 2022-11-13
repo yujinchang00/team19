@@ -151,6 +151,10 @@ position: absolute;z-index: 1;
     margin-left: 10px;
     margin-right: 10px;
     flex: 1;
+    transition: 0.8s;
+}
+.img_favor_list:hover {
+    filter: brightness(0.5);
 }
 
 /* 전체 화면에 스크롤바 제거 */

@@ -39,10 +39,19 @@
 
 .div_favor_list {
     width: 96%;
-    height: 250px;
+    height: 300px;
     margin: 0px auto 0px auto;
     text-align: center;
     display: flex;
+}
+
+.div_favor_list_chk {
+    margin: 0px auto 0px auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
 }
 
 /* -------------------- nav -------------------- */
@@ -156,6 +165,21 @@ position: absolute;z-index: 1;
     margin-left: 20px;
 }
 
+.text_detail {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: normal;
+    color: #D1D1D1;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid #D1D1D1;
+    border-radius: 10%;
+    padding: 5px 10px 5px 10px;
+    opacity: 0;
+    transition: all ease 0.5s;
+}
+
 /* -------------------- img -------------------- */
 
 .img_ott_select {
@@ -164,15 +188,27 @@ position: absolute;z-index: 1;
     margin-left: 20px;
     margin-right: 20px;
     flex: 1;
+    filter: brightness(1);
+    transition: 0.8s;
+}
+.img_ott_select:hover {
+    filter: brightness(0.5);
 }
 
 .img_favor_list {
     width: 344px;
-    height: 220px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 10px;
     flex: 1;
+    filter: brightness(1);
+    transition: 0.8s;
 }
+.img_favor_list:hover + .text_detail{
+    opacity: 1;
+}
+.img_favor_list:hover {
+    filter: brightness(0.5);
+}
+
 
 /* -------------------- btn -------------------- */
 
@@ -188,6 +224,12 @@ position: absolute;z-index: 1;
     border-color: #00462A;
     border-width: 3px;
     margin-right: 50px;
+    transition: 0.3s;
+}
+.btn_submit:hover {
+    color: #E5ECEA;
+    background-color: #00462A;
+    border-color: #E5ECEA;
 }
 
 /* 전체 화면에 스크롤바 제거 */
@@ -196,3 +238,58 @@ position: absolute;z-index: 1;
 }
 
 
+.chk_box { 
+    display: block; 
+    position: relative; 
+    padding-left: 40px; 
+    margin-bottom: 10px; 
+    cursor: pointer; 
+    font-size: 14px; 
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+    
+}
+
+/* 기본 체크박스 숨기기 */
+.chk_box input[type="checkbox"] { 
+    display: none; 
+}
+
+/* 선택되지 않은 체크박스 스타일 꾸미기 */
+.on { 
+    width: 20px; 
+    height: 20px; 
+    border-radius: 15px;
+    background: #ddd; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    margin: 0 10px 0 10px;
+}
+
+/* 선택된 체크박스 스타일 꾸미기 */
+.chk_box input[type="checkbox"]:checked + .on { 
+    background: #00462A; 
+}
+.on:after { 
+    content: ""; 
+    position: absolute; 
+    display: none; 
+}
+.chk_box input[type="checkbox"]:checked + .on:after { 
+    display: block; 
+}
+.on:after { 
+    width: 6px; 
+    height: 10px; 
+    border: solid #fff; 
+    border-width: 0 2px 2px 0; 
+    -webkit-transform: rotate(45deg); 
+    -ms-transform: rotate(45deg); 
+    transform: rotate(45deg); 
+    position: absolute; 
+    left: 6px; 
+    top: 2px; 
+}

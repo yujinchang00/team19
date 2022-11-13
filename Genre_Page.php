@@ -39,34 +39,41 @@
         <h2 class="text_green_h2">WHAT SEASON DO YOU WANT?</h2>
 
         <div class="div_center">
-            <button class="btn_select">장르1</button>
-            <button class="btn_select">장르2</button>
-            <button class="btn_select">장르3</button>
-            <button class="btn_select">장르4</button>
-            <button class="btn_select">장르5</button>
-        </div>
-
-        <div class="div_center">
-            <button class="btn_select">장르1</button>
-            <button class="btn_select">장르2</button>
-            <button class="btn_select">장르3</button>
-            <button class="btn_select">장르4</button>
-            <button class="btn_select">장르5</button>
+            <button class="btn_select">Action & Adventure</button>
+            <button class="btn_select">Fantasy & Animation</button>
+            <button class="btn_select">Family & Comedy</button>
+            <button class="btn_select">Thriller & Horror</button>
+            <button class="btn_select">Romance & Music</button>
         </div>
     </div>
+
+    <script> /* 자동 스크롤 기능.js */
+        const Autoscroll = document.getElementsByTagName('button');
+
+        for(let i = 0; i < Autoscroll.length; i++){
+
+            Autoscroll[i].addEventListener('click',function(e){
+            e.preventDefault();
+            document.querySelector('.div_horizontal' + (i + 1)).scrollIntoView({ behavior: 'smooth' });
+        });
+
+        }
+    </script>
 
     <hr class="hr_division">
 
     <!-- 장르1 영화 포스터 및 개수를 보여주는 section -->
-    <div class="div_horizontal">
-        <h2 class="text_green_h2">장르1</h2>
-        <!-- 
-        데이터: 장르별 영화 개수
-        테이블, 필드값: ex. image TABLE, image_url
-        데이터가 들어갈 위치: <h2 class="text_green_h2">[실제 데이터]개</h2>
-        비고: X
-        -->
-        <h2 class="text_green_h2">23개</h2>
+    <div class="div_horizontal1">
+        <div class="div_horizontal">
+            <h2 class="text_green_h2">Action & Adventure</h2>
+            <!-- 
+            데이터: 장르별 영화 개수
+            테이블, 필드값: ex. image TABLE, image_url
+            데이터가 들어갈 위치: <h2 class="text_green_h2">[실제 데이터]개</h2>
+            비고: X
+            -->
+            <h2 class="text_green_h2">23개</h2>
+        </div>
     </div>
     
     <!-- 
@@ -87,9 +94,11 @@
 
     <!-- 장르2 영화 포스터 및 개수를 보여주는 section -->
     <!-- 이하 동일 -->
-    <div class="div_horizontal">
-        <h2 class="text_green_h2">장르2</h2>
-        <h2 class="text_green_h2">19개</h2>
+    <div class="div_horizontal2">
+        <div class="div_horizontal">
+            <h2 class="text_green_h2">Fantasy & Animation</h2>
+            <h2 class="text_green_h2">19개</h2>
+        </div>        
     </div>
     
     <div class="div_movie_list">
@@ -103,9 +112,45 @@
 
     <!-- 장르3 영화 포스터 및 개수를 보여주는 section -->
     <!-- 이하 동일 -->
-    <div class="div_horizontal">
-        <h2 class="text_green_h2">장르3</h2>
-        <h2 class="text_green_h2">22개</h2>
+    <div class="div_horizontal3">
+        <div class="div_horizontal">
+            <h2 class="text_green_h2">Family & Comedy</h2>
+            <h2 class="text_green_h2">19개</h2>
+        </div> 
+    </div>
+    
+    <div class="div_movie_list">
+        <img class="img_movie_list" src="images/movie1.png" alt="My Image">
+        <img class="img_movie_list" src="images/movie2.png" alt="My Image">
+        <img class="img_movie_list" src="images/movie3.png" alt="My Image">
+        <img class="img_movie_list" src="images/movie4.png" alt="My Image">
+        <img class="img_movie_list" src="images/movie3.png" alt="My Image">
+    </div>
+
+    <!-- 장르4 영화 포스터 및 개수를 보여주는 section -->
+    <!-- 이하 동일 -->
+    <div class="div_horizontal4">
+        <div class="div_horizontal">
+            <h2 class="text_green_h2">Thriller & Horror</h2>
+            <h2 class="text_green_h2">19개</h2>
+        </div> 
+    </div>
+    
+    <div class="div_movie_list">
+        <img class="img_movie_list" src="images/movie1.png" alt="My Image">
+        <img class="img_movie_list" src="images/movie2.png" alt="My Image">
+        <img class="img_movie_list" src="images/movie3.png" alt="My Image">
+        <img class="img_movie_list" src="images/movie4.png" alt="My Image">
+        <img class="img_movie_list" src="images/movie3.png" alt="My Image">
+    </div>
+
+    <!-- 장르5 영화 포스터 및 개수를 보여주는 section -->
+    <!-- 이하 동일 -->
+    <div class="div_horizontal5">
+        <div class="div_horizontal">
+            <h2 class="text_green_h2">Romance & Music</h2>
+            <h2 class="text_green_h2">19개</h2>
+        </div> 
     </div>
     
     <div class="div_movie_list">

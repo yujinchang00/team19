@@ -15,10 +15,11 @@
             <hr class="hr_logo">
         </div>
         
+        
         <div class="div_category">
             <nav class="clearfix">
                 <ul class="clearfix">
-                    <li><a href="">SEASONS</a></li>
+                    <li><a onclick="location.href='Season_Page.php'">SEASONS</a></li>
                     <li><a href="">OTT SERVICE</a></li>
                     <li><a href="">GENRE</a></li>
                     <li><a href="">EVENT</a></li>
@@ -27,6 +28,7 @@
                 </ul>
             </nav>
         </div>
+        
 
         <div class="div_img">
             <img src="images/alarm.png" alt="alarm" width="30px" height="30px">

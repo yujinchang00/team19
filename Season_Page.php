@@ -38,10 +38,12 @@
     <div class="div_button">
         <div class="div_horizontal">
             <h2 class="h2_text">WHAT SEASON DO YOU WANT?</h2>
-            <select class="select_decade" name="">
-                <option value="" selected="selected">Decade: 10 year</option>
-                <option value="">Decade: 5 year</option>
-            </select>
+            <form action="" name="frm">
+                <select class="select_decade" name="list" onchange="location.href=document.frm.list.value">
+                    <option value="Detail_Page.php" selected="selected">Decade: 10 year</option>
+                    <option value="Actor_Page.php">Decade: 5 year</option>
+                </select>
+            </form>
         </div>
 
         <div class="div_center">
@@ -53,18 +55,33 @@
         </div>
     </div>
 
+    <script> /* 자동 스크롤 기능.js */
+        const Autoscroll = document.getElementsByTagName('button');
+
+        for(let i = 0; i < Autoscroll.length; i++){
+
+            Autoscroll[i].addEventListener('click',function(e){
+            e.preventDefault();
+            document.querySelector('.div_horizontal' + (i + 1)).scrollIntoView({ behavior: 'smooth' });
+        });
+
+        }
+    </script>
+
     <hr class="hr_division">
 
     <!-- 연도별 영화 이미지 포스터 및 개수를 보여주는 section -->
-    <div class="div_horizontal">
-        <h2 class="h2_text">~ 1990</h2>
-        <!-- 
-            데이터: 연도별 영화 개수
-            테이블, 필드값: ex. image TABLE, image_url
-            데이터가 들어갈 위치: <h2 class="h2_text">[실제 데이터]개</h2>
-            비고: X
-        -->
-        <h2 class="h2_text">23개</h2>
+    <div class="div_horizontal1">
+        <div class="div_horizontal">
+            <h2 class="h2_text">~ 1990</h2>
+            <!-- 
+                데이터: 연도별 영화 개수
+                테이블, 필드값: ex. image TABLE, image_url
+                데이터가 들어갈 위치: <h2 class="h2_text">[실제 데이터]개</h2>
+                비고: X
+            -->
+            <h2 class="h2_text">23개</h2>
+        </div>
     </div>
 
     <!-- 
@@ -85,9 +102,11 @@
 
     <!-- 연도별(1991~2000) 영화 포스터 및 개수를 보여주는 section -->
     <!-- 이하 동일 -->
-    <div class="div_horizontal">
-        <h2 class="h2_text">1991 ~ 2000</h2>
-        <h2 class="h2_text">19개</h2>
+    <div class="div_horizontal2">
+        <div class="div_horizontal">
+            <h2 class="h2_text">1991 ~ 2000</h2>
+            <h2 class="h2_text">19개</h2>
+        </div>
     </div>
     
     <div class="div_movie_list">
@@ -100,9 +119,45 @@
 
     <!-- 연도별(2001~2010) 영화 포스터 및 개수를 보여주는 section -->
     <!-- 이하 동일 -->
-    <div class="div_horizontal">
-        <h2 class="h2_text">2001 ~ 2010</h2>
-        <h2 class="h2_text">22개</h2>
+    <div class="div_horizontal3">
+        <div class="div_horizontal">
+            <h2 class="h2_text">2001 ~ 2010</h2>
+            <h2 class="h2_text">29개</h2>
+        </div>
+    </div>
+    
+    <div class="div_movie_list">
+        <img class="img_movie_list" src="images/movie1.png" alt="My Image">
+        <img class="img_movie_list" src="images/movie2.png" alt="My Image">
+        <img class="img_movie_list" src="images/movie3.png" alt="My Image">
+        <img class="img_movie_list" src="images/movie4.png" alt="My Image">
+        <img class="img_movie_list" src="images/movie3.png" alt="My Image">
+    </div>
+
+    <!-- 연도별(2001~2010) 영화 포스터 및 개수를 보여주는 section -->
+    <!-- 이하 동일 -->
+    <div class="div_horizontal4">
+        <div class="div_horizontal">
+            <h2 class="h2_text">2011 ~ 2020</h2>
+            <h2 class="h2_text">29개</h2>
+        </div>
+    </div>
+    
+    <div class="div_movie_list">
+        <img class="img_movie_list" src="images/movie1.png" alt="My Image">
+        <img class="img_movie_list" src="images/movie2.png" alt="My Image">
+        <img class="img_movie_list" src="images/movie3.png" alt="My Image">
+        <img class="img_movie_list" src="images/movie4.png" alt="My Image">
+        <img class="img_movie_list" src="images/movie3.png" alt="My Image">
+    </div>
+
+    <!-- 연도별(2001~2010) 영화 포스터 및 개수를 보여주는 section -->
+    <!-- 이하 동일 -->
+    <div class="div_horizontal5">
+        <div class="div_horizontal">
+            <h2 class="h2_text">2021 ~</h2>
+            <h2 class="h2_text">29개</h2>
+        </div>
     </div>
     
     <div class="div_movie_list">

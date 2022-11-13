@@ -180,6 +180,10 @@ position: absolute;z-index: 1;
     height: 220px;
     margin-left: 10px;
     margin-right: 10px;
+    transition: 0.8s;
+}
+.img_rank_list:hover {
+    filter: brightness(0.6);
 }
 
 /* 전체 화면에 스크롤바 제거 */
