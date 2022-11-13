@@ -64,7 +64,7 @@
 
     <!-- MODIFY & DELETE 추후 세션처리로 보완 예정 -->
     <div class="read_btn">
-        <button class="read_btn1" onclick="location.href='community_index.php'">BACK</button>&nbsp;&nbsp;
+        <button class="read_btn1" onclick="location.href='Community_Page.php'">BACK</button>&nbsp;&nbsp;
         <button class="read_btn1" onclick="location.href='community_modify.php'">EDIT</button>&nbsp;&nbsp;
         <button class="read_btn1" a onclick="ask();">DELETE</button>
 
