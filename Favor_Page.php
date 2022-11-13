@@ -1,8 +1,6 @@
 <?php
 include './basic_php_files/mysql_connect.php';
 
-$sql = 'select * from movies_ott';
-$movie_list_all = mysqli_query($mysqli, $sql);
 ?>
 
 <!DOCTYPE html>
@@ -80,43 +78,40 @@ $movie_list_all = mysqli_query($mysqli, $sql);
             <h2 class="text_green_h2">WHAT WOULD YOU LIKE TO SEE?</h2>
             <button type="submit" class="btn_submit">SUBMIT</button>
         </div>
+        <?php
+        /* 수민이가 짠 코드에 php 반복문 넣은것..!*/
+            echo '<div class="div_favor_list">';
 
-    <!-- 
-        데이터: 영화 포스터 이미지
-        테이블, 필드값: ex. image TABLE, image_url
-        데이터가 들어갈 위치: <img class="img_favor_list" src="[실제 데이터]" alt="My Image">
-        비고: [반복문] 하나의 div마다 img가 최대 4개 포함, 아래 코드는 12개의 데이터일 경우
-     -->
-    
-    <?php
-    /* 수민이가 짠 코드에 php 반복문 넣은것..!*/
-    $line_changer=0;
+            $line_changer=0;
+            $checked_arr = array();
+            
+            $sql = 'select mid from movies_ott';
+            $mid_list_all = mysqli_query($mysqli, $sql);
 
-    echo '<div class="div_favor_list">';
-    while($movie=mysqli_fetch_array($movie_list_all,MYSQLI_ASSOC)){
-        $mid = $movie['mid'];
-        $title = $movie['original_title'];
-        $q_src_img = 'select img_src from movies_poster where mid =' . $mid;
-        $src_img = mysqli_query($mysqli, $q_src_img);
-        $f_src_img = mysqli_fetch_array($src_img);
-        echo '
-        <div class="div_favor_list_chk">
-            <img class="img_favor_list" src="' . $f_src_img['img_src'] .'" alt="My Image">
-            <p class="text_detail">상세보기</p>
-            <label for="chk1" class="chk_box">
-                <input type="checkbox" name="fav_mids[]" value="'. $mid . '"id="'. $mid .'"/>
-                <span class="on"></span>
-                선택
-                </label>
-        </div>';
-        $line_changer=$line_changer+1;
-        if ($line_changer%4==0){
-            echo '</div>
-            <div class="div_favor_list">';
-        }
-    }
-    echo '</div>';
-    ?>
-
+            while($movie=mysqli_fetch_array($mid_list_all,MYSQLI_ASSOC)){
+                $mid = $movie['mid'];
+                # $title = $movie['original_title'];
+                $q_src_img = 'select img_src from movies_poster where mid =' . $mid;
+                $src_img = mysqli_query($mysqli, $q_src_img);
+                $f_src_img = mysqli_fetch_array($src_img);
+                echo '
+                <div class="div_favor_list_chk">
+                    <img class="img_favor_list" src="' . $f_src_img['img_src'] .'" alt="My Image">
+                    <p class="text_detail">상세보기</p>
+                    <label for="'. $mid .'" class="chk_box">
+                        <input type="checkbox" name="fav_mids[]" value="'. $mid . '"id="'. $mid .'"/>
+                        <span class="on"></span>
+                        선택
+                        </label>
+                </div>';
+                $line_changer=$line_changer+1;
+                if ($line_changer%4==0){
+                    echo '</div>
+                    <div class="div_favor_list">';
+                }
+            }
+            echo '</div>';
+        ?>
+</form>
 </body>
 </html>

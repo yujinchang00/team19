@@ -1,7 +1,15 @@
 <?php
 include './basic_php_files/mysql_connect.php';
 
-$ott_name=$_GET['fav_mids'];
+$fav_mids_list=$_POST['fav_mids'];
+$fav_set=implode("', '", $fav_mids_list);
+
+$sql = "select sum(netflix) as netflix, sum(amazon_prime) as amazon_prime, sum(disney_plus) as disney_plus, sum(hulu) as hulu from movies_ott where mid in ('".$fav_set."')" ;
+$fav_count_list=mysqli_query($mysqli, $sql);
+$fetched_fav=mysqli_fetch_array($fav_count_list);
+$array = array('netflix' => $fetched_fav['netflix'], 'amazon_prime' => $fetched_fav['amazon_prime'], 'disney_plus' => $fetched_fav['disney_plus'], 'hulu' => $fetched_fav['hulu']);
+$maxVal = max($array);
+$ott_name = array_search($maxVal, $array);
 
 if ($ott_name=='netflix') {
     $text = 'NETFLIX';
@@ -13,9 +21,10 @@ if ($ott_name=='netflix') {
     $text = 'HULU';
 }
 
-$sql1 = "select * from movies_". $ott_name;
-$movie_list=mysqli_query($mysqli, $sql1);
+$sql = "select * from movies_". $ott_name;
+$movie_list=mysqli_query($mysqli, $sql);
 $val_count = mysqli_num_rows($movie_list);
+
 ?>
 
 <!DOCTYPE html>
