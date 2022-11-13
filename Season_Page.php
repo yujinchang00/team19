@@ -1,3 +1,5 @@
+<?php include 'Season_Page_Fetch.php'?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,103 +73,23 @@
 
     <hr class="hr_division">
 
-    <!-- 연도별 영화 이미지 포스터 및 개수를 보여주는 section -->
-    <div class="div_horizontal1">
-        <div class="div_horizontal">
-            <h2 class="h2_text">~ 1990</h2>
-            <!-- 
-                데이터: 연도별 영화 개수
-                테이블, 필드값: ex. image TABLE, image_url
-                데이터가 들어갈 위치: <h2 class="h2_text">[실제 데이터]개</h2>
-                비고: X
-            -->
-            <h2 class="h2_text">23개</h2>
-        </div>
-    </div>
-
-    <!-- 
-        데이터: 장르별 영화 포스터 이미지
-        테이블, 필드값: ex. image TABLE, image_url
-        데이터가 들어갈 위치: <img class="img_movie_list" src="[실제 데이터]" alt="My Image">
-        비고: [반복문] 하나의 div에 img 제한 X, 아래 코드는 5개의 데이터일 경우
-    -->
-    <div class="div_movie_list">
-        <img class="img_movie_list" src="images/movie1.png" alt="My Image">
-        <img class="img_movie_list" src="images/movie2.png" alt="My Image">
-        <img class="img_movie_list" src="images/movie3.png" alt="My Image">
-        <img class="img_movie_list" src="images/movie4.png" alt="My Image">
-        <img class="img_movie_list" src="images/movie3.png" alt="My Image">
-    </div>
-    <!-- =================== 반복문 end ================== -->
-
+    <!-- 연도별(~1990) 영화 이미지 포스터 및 개수를 보여주는 section -->
+    <?php season_poster($mysqli, '0', '1990', '1', 'h2_text');?>
 
     <!-- 연도별(1991~2000) 영화 포스터 및 개수를 보여주는 section -->
-    <!-- 이하 동일 -->
-    <div class="div_horizontal2">
-        <div class="div_horizontal">
-            <h2 class="h2_text">1991 ~ 2000</h2>
-            <h2 class="h2_text">19개</h2>
-        </div>
-    </div>
-    
-    <div class="div_movie_list">
-        <img class="img_movie_list" src="images/movie1.png" alt="My Image">
-        <img class="img_movie_list" src="images/movie2.png" alt="My Image">
-        <img class="img_movie_list" src="images/movie3.png" alt="My Image">
-        <img class="img_movie_list" src="images/movie4.png" alt="My Image">
-        <img class="img_movie_list" src="images/movie3.png" alt="My Image">
-    </div>
+    <?php season_poster($mysqli, '1991', '2000', '2', 'h2_text');?>
 
     <!-- 연도별(2001~2010) 영화 포스터 및 개수를 보여주는 section -->
     <!-- 이하 동일 -->
-    <div class="div_horizontal3">
-        <div class="div_horizontal">
-            <h2 class="h2_text">2001 ~ 2010</h2>
-            <h2 class="h2_text">29개</h2>
-        </div>
-    </div>
-    
-    <div class="div_movie_list">
-        <img class="img_movie_list" src="images/movie1.png" alt="My Image">
-        <img class="img_movie_list" src="images/movie2.png" alt="My Image">
-        <img class="img_movie_list" src="images/movie3.png" alt="My Image">
-        <img class="img_movie_list" src="images/movie4.png" alt="My Image">
-        <img class="img_movie_list" src="images/movie3.png" alt="My Image">
-    </div>
+    <?php season_poster($mysqli, '2001', '2010', '3', 'h2_text');?>
 
-    <!-- 연도별(2001~2010) 영화 포스터 및 개수를 보여주는 section -->
+    <!-- 연도별(2011~2020) 영화 포스터 및 개수를 보여주는 section -->
     <!-- 이하 동일 -->
-    <div class="div_horizontal4">
-        <div class="div_horizontal">
-            <h2 class="h2_text">2011 ~ 2020</h2>
-            <h2 class="h2_text">29개</h2>
-        </div>
-    </div>
-    
-    <div class="div_movie_list">
-        <img class="img_movie_list" src="images/movie1.png" alt="My Image">
-        <img class="img_movie_list" src="images/movie2.png" alt="My Image">
-        <img class="img_movie_list" src="images/movie3.png" alt="My Image">
-        <img class="img_movie_list" src="images/movie4.png" alt="My Image">
-        <img class="img_movie_list" src="images/movie3.png" alt="My Image">
-    </div>
+    <?php season_poster($mysqli, '2011', '2020', '4', 'h2_text');?>
 
-    <!-- 연도별(2001~2010) 영화 포스터 및 개수를 보여주는 section -->
+    <!-- 연도별(2021~) 영화 포스터 및 개수를 보여주는 section -->
     <!-- 이하 동일 -->
-    <div class="div_horizontal5">
-        <div class="div_horizontal">
-            <h2 class="h2_text">2021 ~</h2>
-            <h2 class="h2_text">29개</h2>
-        </div>
-    </div>
-    
-    <div class="div_movie_list">
-        <img class="img_movie_list" src="images/movie1.png" alt="My Image">
-        <img class="img_movie_list" src="images/movie2.png" alt="My Image">
-        <img class="img_movie_list" src="images/movie3.png" alt="My Image">
-        <img class="img_movie_list" src="images/movie4.png" alt="My Image">
-        <img class="img_movie_list" src="images/movie3.png" alt="My Image">
-    </div>
+    <?php season_poster($mysqli, '2021', date('Y'), '5', 'h2_text');?>
 
 </body>
 </html>

@@ -1,3 +1,6 @@
+<?php include 'Genre_Page_Fetch.php' ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,103 +66,20 @@
     <hr class="hr_division">
 
     <!-- 장르1 영화 포스터 및 개수를 보여주는 section -->
-    <div class="div_horizontal1">
-        <div class="div_horizontal">
-            <h2 class="text_green_h2">Action & Adventure</h2>
-            <!-- 
-            데이터: 장르별 영화 개수
-            테이블, 필드값: ex. image TABLE, image_url
-            데이터가 들어갈 위치: <h2 class="text_green_h2">[실제 데이터]개</h2>
-            비고: X
-            -->
-            <h2 class="text_green_h2">23개</h2>
-        </div>
-    </div>
-    
-    <!-- 
-        데이터: 장르별 영화 포스터 이미지
-        테이블, 필드값: ex. image TABLE, image_url
-        데이터가 들어갈 위치: <img class="img_movie_list" src="[실제 데이터]" alt="My Image">
-        비고: [반복문] 하나의 div에 img 제한 X, 아래 코드는 5개의 데이터일 경우
-    -->
-    <div class="div_movie_list">
-        <img class="img_movie_list" src="images/movie1.png" alt="My Image">
-        <img class="img_movie_list" src="images/movie2.png" alt="My Image">
-        <img class="img_movie_list" src="images/movie3.png" alt="My Image">
-        <img class="img_movie_list" src="images/movie4.png" alt="My Image">
-        <img class="img_movie_list" src="images/movie3.png" alt="My Image">
-    </div>
-    <!-- =================== 반복문 end ================== -->
-
+    <?php genre_poster($mysqli, 'Action & Adventure', '1', 'text_green_h2'); ?>
 
     <!-- 장르2 영화 포스터 및 개수를 보여주는 section -->
-    <!-- 이하 동일 -->
-    <div class="div_horizontal2">
-        <div class="div_horizontal">
-            <h2 class="text_green_h2">Fantasy & Animation</h2>
-            <h2 class="text_green_h2">19개</h2>
-        </div>        
-    </div>
-    
-    <div class="div_movie_list">
-        <img class="img_movie_list" src="images/movie1.png" alt="My Image">
-        <img class="img_movie_list" src="images/movie2.png" alt="My Image">
-        <img class="img_movie_list" src="images/movie3.png" alt="My Image">
-        <img class="img_movie_list" src="images/movie4.png" alt="My Image">
-        <img class="img_movie_list" src="images/movie3.png" alt="My Image">
-    </div>
+    <?php genre_poster($mysqli, 'Fantasy & Animation', '2', 'text_green_h2'); ?>
 
 
     <!-- 장르3 영화 포스터 및 개수를 보여주는 section -->
-    <!-- 이하 동일 -->
-    <div class="div_horizontal3">
-        <div class="div_horizontal">
-            <h2 class="text_green_h2">Family & Comedy</h2>
-            <h2 class="text_green_h2">19개</h2>
-        </div> 
-    </div>
-    
-    <div class="div_movie_list">
-        <img class="img_movie_list" src="images/movie1.png" alt="My Image">
-        <img class="img_movie_list" src="images/movie2.png" alt="My Image">
-        <img class="img_movie_list" src="images/movie3.png" alt="My Image">
-        <img class="img_movie_list" src="images/movie4.png" alt="My Image">
-        <img class="img_movie_list" src="images/movie3.png" alt="My Image">
-    </div>
+    <?php genre_poster($mysqli, 'Family & Comedy', '3', 'text_green_h2'); ?>
 
     <!-- 장르4 영화 포스터 및 개수를 보여주는 section -->
-    <!-- 이하 동일 -->
-    <div class="div_horizontal4">
-        <div class="div_horizontal">
-            <h2 class="text_green_h2">Thriller & Horror</h2>
-            <h2 class="text_green_h2">19개</h2>
-        </div> 
-    </div>
-    
-    <div class="div_movie_list">
-        <img class="img_movie_list" src="images/movie1.png" alt="My Image">
-        <img class="img_movie_list" src="images/movie2.png" alt="My Image">
-        <img class="img_movie_list" src="images/movie3.png" alt="My Image">
-        <img class="img_movie_list" src="images/movie4.png" alt="My Image">
-        <img class="img_movie_list" src="images/movie3.png" alt="My Image">
-    </div>
+    <?php genre_poster($mysqli, 'Thriller & Horror', '4', 'text_green_h2'); ?>
 
     <!-- 장르5 영화 포스터 및 개수를 보여주는 section -->
-    <!-- 이하 동일 -->
-    <div class="div_horizontal5">
-        <div class="div_horizontal">
-            <h2 class="text_green_h2">Romance & Music</h2>
-            <h2 class="text_green_h2">19개</h2>
-        </div> 
-    </div>
-    
-    <div class="div_movie_list">
-        <img class="img_movie_list" src="images/movie1.png" alt="My Image">
-        <img class="img_movie_list" src="images/movie2.png" alt="My Image">
-        <img class="img_movie_list" src="images/movie3.png" alt="My Image">
-        <img class="img_movie_list" src="images/movie4.png" alt="My Image">
-        <img class="img_movie_list" src="images/movie3.png" alt="My Image">
-    </div>
+    <?php genre_poster($mysqli, 'Romance & Music', '5', 'text_green_h2'); ?>
 
 
 </body>

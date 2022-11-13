@@ -1,7 +1,7 @@
 <?php
 include './basic_php_files/mysql_connect.php';
 
-$ott_name=$_GET['ott_name'];
+$ott_name=$_GET['fav_mids'];
 
 if ($ott_name=='netflix') {
     $text = 'NETFLIX';

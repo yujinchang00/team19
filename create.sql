@@ -5,7 +5,7 @@ use team19;
 CREATE TABLE IF NOT EXISTS movies_ott(
     mid INTEGER, netflix INTEGER,amazon_prime INTEGER, disney_plus INTEGER, hulu INTEGER,
     original_title VARCHAR(100),homepage VARCHAR(100), overview TEXT,
-    popularity FLOAT, production_countries VARCHAR(20), release_date VARCHAR(50),
+    popularity FLOAT, production_countries VARCHAR(20), release_date DATE,
     revenue INTEGER, runtime FLOAT, spoken_languages VARCHAR(20), vote_average FLOAT, vote_count INTEGER,
     genres_1 VARCHAR(20), genres_2 VARCHAR(20), genres_3 VARCHAR(20), 
     keywords_1 VARCHAR(20), keywords_2 VARCHAR(20), keywords_3 VARCHAR(20)
@@ -21,7 +21,7 @@ SELECT * FROM movies_ott LIMIT 10;
 CREATE TABLE IF NOT EXISTS movies_netflix(
     mid INTEGER,
     original_title VARCHAR(100),homepage VARCHAR(100), overview TEXT,
-    popularity FLOAT, production_countries VARCHAR(20), release_date VARCHAR(50),
+    popularity FLOAT, production_countries VARCHAR(20), release_date DATE,
     revenue INTEGER, runtime FLOAT, spoken_languages VARCHAR(20), vote_average FLOAT, vote_count INTEGER,
     genres_1 VARCHAR(20), genres_2 VARCHAR(20), genres_3 VARCHAR(20), 
     keywords_1 VARCHAR(20), keywords_2 VARCHAR(20), keywords_3 VARCHAR(20)
@@ -34,7 +34,7 @@ FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' IGNORE 1 ROWS;
 CREATE TABLE IF NOT EXISTS movies_amazon_prime(
     mid INTEGER,
     original_title VARCHAR(100),homepage VARCHAR(100), overview TEXT,
-    popularity FLOAT, production_countries VARCHAR(20), release_date VARCHAR(50),
+    popularity FLOAT, production_countries VARCHAR(20), release_date DATE,
     revenue INTEGER, runtime FLOAT, spoken_languages VARCHAR(20), vote_average FLOAT, vote_count INTEGER,
     genres_1 VARCHAR(20), genres_2 VARCHAR(20), genres_3 VARCHAR(20), 
     keywords_1 VARCHAR(20), keywords_2 VARCHAR(20), keywords_3 VARCHAR(20)
@@ -47,7 +47,7 @@ FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' IGNORE 1 ROWS;
 CREATE TABLE IF NOT EXISTS movies_disney_plus(
     mid INTEGER,
     original_title VARCHAR(100),homepage VARCHAR(100), overview TEXT,
-    popularity FLOAT, production_countries VARCHAR(20), release_date VARCHAR(50),
+    popularity FLOAT, production_countries VARCHAR(20), release_date DATE,
     revenue INTEGER, runtime FLOAT, spoken_languages VARCHAR(20), vote_average FLOAT, vote_count INTEGER,
     genres_1 VARCHAR(20), genres_2 VARCHAR(20), genres_3 VARCHAR(20), 
     keywords_1 VARCHAR(20), keywords_2 VARCHAR(20), keywords_3 VARCHAR(20)
@@ -60,7 +60,7 @@ FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' IGNORE 1 ROWS;
 CREATE TABLE IF NOT EXISTS movies_hulu(
     mid INTEGER,
     original_title VARCHAR(100),homepage VARCHAR(100), overview TEXT,
-    popularity FLOAT, production_countries VARCHAR(20), release_date VARCHAR(50),
+    popularity FLOAT, production_countries VARCHAR(20), release_date DATE,
     revenue INTEGER, runtime FLOAT, spoken_languages VARCHAR(20), vote_average FLOAT, vote_count INTEGER,
     genres_1 VARCHAR(20), genres_2 VARCHAR(20), genres_3 VARCHAR(20), 
     keywords_1 VARCHAR(20), keywords_2 VARCHAR(20), keywords_3 VARCHAR(20)
