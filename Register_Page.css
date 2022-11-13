@@ -210,6 +210,12 @@ position: absolute;z-index: 1;
     font-size: 25px;
     color: white;
     border-radius: 7px;
+    transition: 0.3s;
+}
+.btn_login:hover {
+    color: #00462A;
+    background-color: #E5ECEA;
+    border-color: #E5ECEA;
 }
 
 

@@ -174,3 +174,7 @@ position: absolute;z-index: 1;
     display: inline-block;
     margin-left: 20px;
 }
+
+.text_green {
+    color: #00462A;
+}
