@@ -7,7 +7,7 @@
         if($starting == '0') {
             $movie_list=mysqli_query($mysql, $sql1 . " <= '". $ending . "-12-31'");
             $text='~' . $ending;
-            movie_poster_list($mysql, $movie_list,  $text, $ind);
+            movie_poster_list($mysql, $movie_list,  $text, $ind, $class_name);
 
         } else {
             $movie_list=mysqli_query($mysql, $sql1 . " between '" . $starting . "-01-01' and '" . $ending . "-12-31'");
