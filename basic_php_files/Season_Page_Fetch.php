@@ -3,7 +3,7 @@
 
     function season_poster($mysql, $starting, $ending, $ind,  $class_name, $button_class) {
         $group_by_decade_sql = "select count(*), decade from (select ceil(year(release_date) / 10) * 10 as decade from movies_ott) t group by decade";
-        $groupby_with_rollup_sql = "select decade, decade5, count(*) from (select ceil(year(release_date) / 10) * 10 as decade, ceil(year(release_date) / 5) * 5 as decade5 from movies_ott) t group by decade, decade5 with rollup;"
+        $groupby_with_rollup_sql = "select decade, decade5, count(*) from (select ceil(year(release_date) / 10) * 10 as decade, ceil(year(release_date) / 5) * 5 as decade5 from movies_ott) t group by decade, decade5 with rollup";
         $sql1 = "select * from movies_ott where release_date"; /* 날짜 조건 넣기 */
         if($starting == '0') {
             $movie_list=mysqli_query($mysql, $sql1 . " <= '". $ending . "-12-31'");

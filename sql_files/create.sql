@@ -66,3 +66,37 @@ CREATE TABLE IF NOT EXISTS movies_korean(
     cast VARCHAR(100), crank_in VARCHAR(50), crank_out VARCHAR(50), presents VARCHAR(50), production VARCHAR(50),
     release_data VARCHAR(50), etc TEXT
 ) DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+-- 테이블 구조 user_board
+--
+
+CREATE TABLE IF NOT EXISTS user_board (
+  user_id int(11) NOT NULL,
+  user_name varchar(20) NOT NULL,
+  board_id int(11) NOT NULL,
+  last_chg_date datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+
+-- --------------------------------------------------------
+
+--
+-- 테이블 구조 `user_db`
+--
+
+CREATE TABLE IF NOT EXISTS user_db (
+  user_id int(11) NOT NULL,
+  `_password` int(11) NOT NULL,
+  `user_name` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+
+-- --------------------------------------------------------
+
+--
+-- 테이블 구조 `user_fav_db`
+--
+
+CREATE TABLE IF NOT EXISTS `user_fav_db` (
+  `user_id` int(11) NOT NULL,
+  `mid` int(11) DEFAULT NULL,
+  `rate` int(11) DEFAULT NULL CHECK (`rate` > 0 and `rate` < 6)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
