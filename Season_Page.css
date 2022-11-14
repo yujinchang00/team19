@@ -1,0 +1,205 @@
+/* -------------------- div -------------------- */
+.div_mainbar{
+    display: flex;
+}
+
+.div_logo{
+    margin-left: 2%;
+}
+
+.div_category{  /* 아래로 정렬 */
+    margin: auto 0 0 2%;
+}
+
+.div_img{
+    margin: auto 2% 0 auto;
+}
+
+.div_button {
+    width:96%; 
+    height: 190px; 
+    background-color: #F7F7F7;
+    border-radius: 1em;
+    margin: 20px auto 20px auto;
+}
+
+.div_center {
+    text-align: center;
+}
+
+/* 2개의 컴포넌트를 양쪽에 배치 */
+.div_horizontal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.div_movie_list {
+    width: 96%;
+    height: 250px;
+    overflow: auto;
+    white-space: nowrap;
+    margin: 20px auto 20px auto;
+    display: flex;
+}
+
+/* 스크롤바 없애기 */
+.div_movie_list::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* -------------------- nav -------------------- */
+
+nav{
+    font-size: 12pt;
+    font-family: Georgia, 'PT Sans', Arial, Sans-serif;
+    position: relative;
+}
+nav ul{
+    padding: 0;
+    margin: 0 auto;
+    width: auto;
+}
+nav li{
+}
+nav a{
+    line-height: 50px;
+    height: 50px;
+}
+nav li a{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+nav li:last-child a{
+    border-right: 0;
+    }
+nav a:hover, nav a:active{
+}
+nav a#pull{
+    display: none;
+}
+html {
+-webkit-touch-callout:none;
+-webkit-user-select:none;
+-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+}
+
+ul{
+/*list-style-type: none;*/
+margin: 0;
+padding: 0;
+text-align: center;
+}
+li{
+/*position: relative;*/
+display: inline-block;
+}
+li a{
+color: #A8A8A8;
+text-align: center;
+padding: 14.5px 16px;
+text-decoration: none;
+}
+li a:hover{
+/*color: #597812;*/
+color: #00462A;
+font-weight:normal;
+}
+.menu {
+width: 5000px;
+height: 50px;
+text-align: center;
+max-width: 100%;
+background-position: center;
+background-size: cover;
+background-color: white;color: rgb(192, 35, 35);
+position: absolute;z-index: 1;
+}
+
+/* -------------------- hr -------------------- */
+
+.hr_logo{
+    width: 250px;
+    height: 2px;
+    background-color: #00462A;
+    color: #00462A;
+    border: 0;
+}
+
+.hr_division {
+    width: 96%;
+    height: 2px;
+    background-color: #DEDEDE;
+    color: #DEDEDE;
+    border: 0;
+}
+
+/* -------------------- text -------------------- */
+
+.h1_logo{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: #00462A;
+    text-align: center;
+    line-height: 10px;
+}
+
+.h2_text {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: #00462A;
+    line-height: 10px;
+    padding: 30px;
+    margin: 0;
+}
+
+.text_green {
+    color: #00462A;
+}
+
+/* -------------------- btn -------------------- */
+
+.btn_select {
+    width: 260px;
+    height: 100px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: #00462A;
+    font-size: 20px;
+    background-color: #E5ECEA;
+    border-radius: 1em;
+    border: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* -------------------- select -------------------- */
+
+.select_decade {
+    width: 140px;
+    height: 30px;
+    float: right;
+    border-radius: 2px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #00462A;
+    border: 0;
+    margin: 0 40px 0 0;
+}
+
+/* -------------------- img -------------------- */
+
+.img_movie_list {
+    width: 344px;
+    height: 220px;
+    display: inline-block;
+    margin-left: 20px;
+    flex: 1;
+}
+
+/* 전체 화면에 스크롤바 제거 */
+.html, body::-webkit-scrollbar {
+    display: none;
+}
