@@ -16,12 +16,12 @@
         <div class="div_category">
         <nav class="clearfix">
             <ul class="clearfix">
-                <li><a href="">SEASONS</a></li>
-                <li><a href="">OTT SERVICE</a></li>
-                <li><a href="">GENRE</a></li>
-                <li><a href="Event_Page.php">EVENT</a></li>
-                <li><a href="">COMMUNITY</a></li>
-                <li><a href="">KOREAN ACTOR</a></li>
+                <li><a onclick="location.href='Season_Page.php'">SEASONS</a></li>
+                <li><a onclick="location.href='Favor_Page.php'">OTT SERVICE</a></li>
+                <li><a onclick="location.href='Genre_Page.php'">GENRE</a></li>
+                <li><a class="text_green" onclick="location.href='Event_Page_autoscroll.php'">EVENT</a></li>
+                <li><a onclick="location.href='Community_Page.php'">COMMUNITY</a></li>
+                <li><a onclick="location.href='Actor_Page.php'">KOREAN ACTOR</a></li>
             </ul>
         </nav>
         </div>
