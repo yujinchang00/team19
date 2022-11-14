@@ -39,7 +39,6 @@
 
 .div_favor_list {
     width: 96%;
-    height: 300px;
     margin: 0px auto 0px auto;
     text-align: center;
     display: flex;
@@ -52,6 +51,7 @@
     flex-wrap: wrap;
     justify-content: center;
     position: relative;
+    display: block;
 }
 
 /* -------------------- nav -------------------- */
@@ -161,32 +161,33 @@ position: absolute;z-index: 1;
     font-style: italic;
     color: #00462A;
     line-height: 10px;
-    padding: 30px;
+    padding: 0 30px 0 30px;
     margin-left: 20px;
 }
 
 .text_detail {
+    width: 60%;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: normal;
     color: #D1D1D1;
     position: absolute;
-    top: 40%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     border: 3px solid #D1D1D1;
     border-radius: 10%;
-    padding: 5px 10px 5px 10px;
     opacity: 0;
     transition: all ease 0.5s;
+    backdrop-filter: brightness(0.5);
+}
+.text_detail:hover {
+    opacity: 1;
 }
 
 /* -------------------- img -------------------- */
 
 .img_ott_select {
-    width: 300px;
-    height: 160px;
-    margin-left: 20px;
-    margin-right: 20px;
+    width: 344px;
     flex: 1;
     filter: brightness(1);
     transition: 0.8s;
@@ -202,10 +203,10 @@ position: absolute;z-index: 1;
     filter: brightness(1);
     transition: 0.8s;
 }
-.img_favor_list:hover + .text_detail{
+.img_favor_list:hover ~ .text_detail{
     opacity: 1;
 }
-.img_favor_list:hover {
+.div_favor_list_chk:hover > .img_favor_list{
     filter: brightness(0.5);
 }
 
@@ -230,6 +231,10 @@ position: absolute;z-index: 1;
     color: #E5ECEA;
     background-color: #00462A;
     border-color: #E5ECEA;
+}
+
+.btn_ott_select {
+    border: 0px solid #00462A;
 }
 
 /* 전체 화면에 스크롤바 제거 */

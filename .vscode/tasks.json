@@ -1,6 +1,6 @@
 {
 
-	"version": "0.1.0",
+	"version": "2.0.0",
 	
 	"command": "chrome",
 	
@@ -12,6 +12,8 @@
 	
 		
 	
-	"args": ["localhost\\${workspaceRootFolderName}\\${fileBasename}"]
+	"args": [
+		"localhost\\${workspaceRootFolderName}\\${fileBasename}"
+	],
 	
 }

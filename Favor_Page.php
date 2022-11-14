@@ -9,7 +9,7 @@ include './basic_php_files/mysql_connect.php';
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Favor_Page</title>
-    <link href="Favor_Page.css" rel="stylesheet" type="text/css" />
+    <link href="Favor_Page.css?ver=1.0" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <!-- 메인바 -->
@@ -49,10 +49,10 @@ include './basic_php_files/mysql_connect.php';
         <h2 class="text_green_h2">MOVIES PER OTT TYPE</h2>
         <form action="OTT_Page.php" method="get">
             <div class="div_ott_select">
-                <button type="submit" name="ott_name" value="netflix"><img class="img_ott_select" src="images/netflex.png" alt="netflix"></button>
-                <button type="submit" name="ott_name" value="disney_plus"><img class="img_ott_select" src="images/disney.png" alt="disney plus"></button>
-                <button type="submit" name="ott_name" value="amazon_prime"><img class="img_ott_select" src="images/prime.png" alt="amazon prime"></button>
-                <button type="submit" name="ott_name" value="hulu"><img class="img_ott_select" src="images/hulu.png" alt="hulu"></button>
+                <button class="btn_ott_select" type="submit" name="ott_name" value="netflix"><img class="img_ott_select" src="images/netflex.png" alt="netflix"></button>
+                <button class="btn_ott_select" type="submit" name="ott_name" value="disney_plus"><img class="img_ott_select" src="images/disney.png" alt="disney plus"></button>
+                <button class="btn_ott_select" type="submit" name="ott_name" value="amazon_prime"><img class="img_ott_select" src="images/prime.png" alt="amazon prime"></button>
+                <button class="btn_ott_select" type="submit" name="ott_name" value="hulu"><img class="img_ott_select" src="images/hulu.png" alt="hulu"></button>
             </div>
         </form>
 
