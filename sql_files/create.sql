@@ -96,7 +96,7 @@ CREATE TABLE IF NOT EXISTS user_db (
 --
 
 CREATE TABLE IF NOT EXISTS `user_fav_db` (
-  `user_id` int(11) NOT NULL,
-  `mid` int(11) DEFAULT NULL,
+  `user_id` int(11) NOT NULL PRIMARY KEY,
+  `mid` varchar(100) DEFAULT NULL,
   `rate` int(11) DEFAULT NULL CHECK (`rate` > 0 and `rate` < 6)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;

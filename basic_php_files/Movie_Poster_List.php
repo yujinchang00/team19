@@ -14,7 +14,7 @@ function movie_poster_list($mysql, $movie_list, $text, $ind, $class_name, $butto
     </div>
   </div>
   <form action="Detail_Page.php" method="get">
-  <div class="div_movie_list">';
+  <div class="div_movie_list"> <input type="hidden" name="lan" value="eng"/>';
 
   while($movie=mysqli_fetch_array($movie_list,MYSQLI_ASSOC)) {
     $mid = $movie['mid'];

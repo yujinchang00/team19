@@ -3,7 +3,13 @@ include './basic_php_files/mysql_connect.php';
 
 $fav_mids_list=$_POST['fav_mids'];
 $fav_set=implode("', '", $fav_mids_list);
+$fav_string = implode(", ", $fav_mids_list);
 
+#user_id 임시 지정
+$user_id = 1;
+
+$user_fav_sql = "insert into user_fav_db (user_id, mid) values ('".$user_id."', '".$fav_string."') on duplicate key update mid = '".$fav_string."'";
+$user_fav_db_update = mysqli_query($mysqli, $user_fav_sql);
 $sql = "select sum(netflix) as netflix, sum(amazon_prime) as amazon_prime, sum(disney_plus) as disney_plus, sum(hulu) as hulu from movies_ott where mid in ('".$fav_set."')" ;
 $fav_count_list=mysqli_query($mysqli, $sql);
 $fetched_fav=mysqli_fetch_array($fav_count_list);
