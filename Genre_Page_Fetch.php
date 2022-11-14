@@ -6,7 +6,7 @@
                     'Mystery', 'Horror', 'Music', 'War', 'History', 'Documentary', 'Foreign', 'TV Movie'];
     */
     
-    function genre_poster($mysql, $text, $ind, $class_name) {
+    function genre_poster($mysql, $text, $ind, $class_name, $button_class) {
         switch ($ind) {
           case '1':
             $genre_list = "('Action', 'Adventure', 'Mystery')";
@@ -28,6 +28,6 @@
         $sql1 = "select * from movies_ott where (genres_1 in " . $genre_list . ") or (genres_2 in " . $genre_list . ") or (genres_3 in " . $genre_list .")"; /* 날짜 조건 넣기 */
         $sql2 = "select count(*) from movies_ott where genres_1 = " . $genre_list . " or genres_2 = " . $genre_list . " or genres_3 = " . $genre_list; /* 여기도 */
         $movie_list=mysqli_query($mysql, $sql1);
-        movie_poster_list($mysql, $movie_list,  $text, $ind, $class_name);
+        movie_poster_list($mysql, $movie_list,  $text, $ind, $class_name, $button_class);
     }
 ?>

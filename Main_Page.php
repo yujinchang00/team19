@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Main_Page</title>
-    <link href="Main_Page.css?ver=1.02" rel="stylesheet" type="text/css" />
+    <link href="Main_Page.css?ver=1.03" rel="stylesheet" type="text/css" />
 
     <!-- 사용자 이미지 누르면 정보 띄우기 -->
     <script type="text/javascript"> 
@@ -68,12 +68,12 @@
             <h2 class="text_subtitle">AWARENESS</h2>
         </div>
         
-        <div class="div_rank_list_text">
-            <h2 class="text_rank_green">1</h2>
+        <!-- <div class="div_rank_list_text">
+            
             <h2 class="text_rank_green">2</h2>
             <h2 class="text_rank_green">3</h2>
             <h2 class="text_rank_green">4</h2>
-        </div>
+        </div> -->
         <!-- 
             데이터: 영화 포스터 이미지
             테이블, 필드값: ex. image TABLE, image_url
@@ -81,10 +81,22 @@
             비고: X
         -->
         <div class="div_rank_list">
-            <img class="img_rank_list" src="images/movie1.png" alt="My Image" onclick="location.href='Detail_Page.php'">
-            <img class="img_rank_list" src="images/movie1.png" alt="My Image" onclick="location.href='Detail_Page.php'">
-            <img class="img_rank_list" src="images/movie1.png" alt="My Image" onclick="location.href='Detail_Page.php'">
-            <img class="img_rank_list" src="images/movie1.png" alt="My Image" onclick="location.href='Detail_Page.php'">
+            <div class="div_center">
+                <h2 class="text_rank_green">1</h2>
+                <img class="img_rank_list" src="images/movie1.png" alt="My Image" onclick="location.href='Detail_Page.php'">
+            </div>
+            <div class="div_center">
+                <h2 class="text_rank_green">2</h2>
+                <img class="img_rank_list" src="images/movie1.png" alt="My Image" onclick="location.href='Detail_Page.php'">
+            </div>
+            <div class="div_center">
+                <h2 class="text_rank_green">3</h2>
+                <img class="img_rank_list" src="images/movie1.png" alt="My Image" onclick="location.href='Detail_Page.php'">
+            </div>
+            <div class="div_center">
+                <h2 class="text_rank_green">4</h2>
+                <img class="img_rank_list" src="images/movie1.png" alt="My Image" onclick="location.href='Detail_Page.php'">
+            </div>
         </div>
 
 
@@ -93,12 +105,6 @@
             <h2 class="text_subtitle">RATING</h2>
         </div>
 
-        <div class="div_rank_list_text">
-            <h2 class="text_rank_green">1</h2>
-            <h2 class="text_rank_green">2</h2>
-            <h2 class="text_rank_green">3</h2>
-            <h2 class="text_rank_green">4</h2>
-        </div>
         <!-- 
             데이터: 영화 포스터 이미지
             테이블, 필드값: ex. image TABLE, image_url
@@ -106,10 +112,22 @@
             비고: X
         -->
         <div class="div_rank_list">
-            <img class="img_rank_list" src="images/movie1.png" alt="My Image" onclick="location.href='Detail_Page.php'">
-            <img class="img_rank_list" src="images/movie1.png" alt="My Image" onclick="location.href='Detail_Page.php'">
-            <img class="img_rank_list" src="images/movie1.png" alt="My Image" onclick="location.href='Detail_Page.php'">
-            <img class="img_rank_list" src="images/movie1.png" alt="My Image" onclick="location.href='Detail_Page.php'">
+            <div class="div_center">
+                <h2 class="text_rank_green">1</h2>
+                <img class="img_rank_list" src="images/movie1.png" alt="My Image" onclick="location.href='Detail_Page.php'">
+            </div>
+            <div class="div_center">
+                <h2 class="text_rank_green">2</h2>
+                <img class="img_rank_list" src="images/movie1.png" alt="My Image" onclick="location.href='Detail_Page.php'">
+            </div>
+            <div class="div_center">
+                <h2 class="text_rank_green">3</h2>
+                <img class="img_rank_list" src="images/movie1.png" alt="My Image" onclick="location.href='Detail_Page.php'">
+            </div>
+            <div class="div_center">
+                <h2 class="text_rank_green">4</h2>
+                <img class="img_rank_list" src="images/movie1.png" alt="My Image" onclick="location.href='Detail_Page.php'">
+            </div>
         </div>
 
 
@@ -118,12 +136,7 @@
             <h2 class="text_subtitle">PROFIT</h2>
         </div>
 
-        <div class="div_rank_list_text">
-            <h2 class="text_rank_green">1</h2>
-            <h2 class="text_rank_green">2</h2>
-            <h2 class="text_rank_green">3</h2>
-            <h2 class="text_rank_green">4</h2>
-        </div>
+        
         <!-- 
             데이터: 영화 포스터 이미지
             테이블, 필드값: ex. image TABLE, image_url
@@ -131,10 +144,22 @@
             비고: X
         -->
         <div class="div_rank_list">
-            <img class="img_rank_list" src="images/movie1.png" alt="My Image" onclick="location.href='Detail_Page.php'">
-            <img class="img_rank_list" src="images/movie1.png" alt="My Image" onclick="location.href='Detail_Page.php'">
-            <img class="img_rank_list" src="images/movie1.png" alt="My Image" onclick="location.href='Detail_Page.php'">
-            <img class="img_rank_list" src="images/movie1.png" alt="My Image" onclick="location.href='Detail_Page.php'">
+            <div class="div_center">
+                <h2 class="text_rank_green">1</h2>
+                <img class="img_rank_list" src="images/movie1.png" alt="My Image" onclick="location.href='Detail_Page.php'">
+            </div>
+            <div class="div_center">
+                <h2 class="text_rank_green">2</h2>
+                <img class="img_rank_list" src="images/movie1.png" alt="My Image" onclick="location.href='Detail_Page.php'">
+            </div>
+            <div class="div_center">
+                <h2 class="text_rank_green">3</h2>
+                <img class="img_rank_list" src="images/movie1.png" alt="My Image" onclick="location.href='Detail_Page.php'">
+            </div>
+            <div class="div_center">
+                <h2 class="text_rank_green">4</h2>
+                <img class="img_rank_list" src="images/movie1.png" alt="My Image" onclick="location.href='Detail_Page.php'">
+            </div>
         </div>
     </div>
 

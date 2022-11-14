@@ -85,34 +85,34 @@
     -->
 
     <!-- 연도별(~1990) 영화 이미지 포스터 및 개수를 보여주는 section -->
-    <?php season_poster($mysqli, '0', '1990', '1', 'h2_text');?>
+    <?php season_poster($mysqli, '0', '1990', '1', 'h2_text', 'btn_movie_detail');?>
 
     <!-- 연도별(1991~2000) 영화 포스터 및 개수를 보여주는 section -->
-    <?php season_poster($mysqli, '1991', '1995', '2', 'h2_text');?>
+    <?php season_poster($mysqli, '1991', '1995', '2', 'h2_text', 'btn_movie_detail');?>
 
     <!-- 연도별(2001~2010) 영화 포스터 및 개수를 보여주는 section -->
     <!-- 이하 동일 -->
-    <?php season_poster($mysqli, '1996', '2000', '3', 'h2_text');?>
+    <?php season_poster($mysqli, '1996', '2000', '3', 'h2_text', 'btn_movie_detail');?>
 
     <!-- 연도별(2011~2020) 영화 포스터 및 개수를 보여주는 section -->
     <!-- 이하 동일 -->
-    <?php season_poster($mysqli, '2001', '2005', '4', 'h2_text');?>
+    <?php season_poster($mysqli, '2001', '2005', '4', 'h2_text', 'btn_movie_detail');?>
 
     <!-- 연도별(2011~2020) 영화 포스터 및 개수를 보여주는 section -->
     <!-- 이하 동일 -->
-    <?php season_poster($mysqli, '2006', '2010', '5', 'h2_text');?>
+    <?php season_poster($mysqli, '2006', '2010', '5', 'h2_text', 'btn_movie_detail');?>
 
     <!-- 연도별(2011~2020) 영화 포스터 및 개수를 보여주는 section -->
     <!-- 이하 동일 -->
-    <?php season_poster($mysqli, '2011', '2015', '6', 'h2_text');?>
+    <?php season_poster($mysqli, '2011', '2015', '6', 'h2_text', 'btn_movie_detail');?>
 
     <!-- 연도별(2011~2020) 영화 포스터 및 개수를 보여주는 section -->
     <!-- 이하 동일 -->
-    <?php season_poster($mysqli, '2016', '2020', '7', 'h2_text');?>
+    <?php season_poster($mysqli, '2016', '2020', '7', 'h2_text', 'btn_movie_detail');?>
 
     <!-- 연도별(2021~) 영화 포스터 및 개수를 보여주는 section -->
     <!-- 이하 동일 -->
-    <?php season_poster($mysqli, '2021', date('Y'), '8', 'h2_text');?>
+    <?php season_poster($mysqli, '2021', date('Y'), '8', 'h2_text', 'btn_movie_detail');?>
 
 </body>
 </html>
