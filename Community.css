@@ -36,27 +36,6 @@
     display: flex;
 }
 
-/* 2개의 컴포넌트를 양쪽에 배치 */
-.div_horizontal {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 15% 0 15%;
-}
-
-.div_login {
-    width: 300px;
-    height: 120px;
-    background-color: #F2F6F4;
-    position: absolute;
-    right: 3%;
-    border: 3px solid #66907F;
-    border-radius: 3%;
-    margin-top: 10px;
-    display: none;
-}
-
-
 /* -------------------- nav -------------------- */
 
 nav{
@@ -135,20 +114,18 @@ position: absolute;z-index: 1;
     color: #00462A;
     border: 0;
 }
-
+.h1_logo{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: #00462A;
+    text-align: center;
+    line-height: 10px;
+}
 .hr_division {
     width: 96%;
     height: 2px;
     background-color: #DEDEDE;
     color: #DEDEDE;
-    border: 0;
-}
-
-.hr_login_division {
-    width: 96%;
-    height: 2px;
-    background-color: #66907F;
-    color: #66907F;
     border: 0;
 }
 
@@ -202,42 +179,6 @@ position: absolute;z-index: 1;
     margin: 0;
 }
 
-.text_login {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-style: normal;
-    font-size: 18px;
-    color: #66907F;
-    text-align: center;
-}
-
-.text_gray {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-style: italic;
-    color: #656565;
-    line-height: 10px;
-    text-align: center;
-    margin: 50px 0 30px 0;
-}
-
-.text_green2 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-style: italic;
-    color: #00462A;
-    line-height: 10px;
-    text-align: center;
-    margin: 30px 0 30px 0;
-}
-
-.text_gray_p {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-size: smaller;
-    color: #656565;
-    line-height: 10px;
-    margin: 10px 0 10px 0;
-}
-
-
 /* -------------------- img -------------------- */
 
 .img_rank_list {
@@ -245,106 +186,172 @@ position: absolute;z-index: 1;
     height: 220px;
     margin-left: 10px;
     margin-right: 10px;
-    transition: 0.8s;
-}
-.img_rank_list:hover {
-    filter: brightness(0.5);
-}
-
-.img_btn_close {
-    width: 30px;
-    height: 30px;
-    margin: 20px 20px 40px 0 ;
-    float: right;
-}
-
-
-/* -------------------- btn -------------------- */
-
-.btn_login {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-style: normal;
-    font-size: 18px;
-    color: #66907F;
-    text-align: center;
-    padding: 10px 15px 10px 15px;
-    margin-top: 5px;
-    border: 2px solid #66907F;
-    border-color: #66907F;
-    border-radius: 5%;
-    background-color: #F2F6F4;
-}
-
-.btn_login_modal {
-    width: 70%;
-    height: 50px;
-    margin: 20px 0 20px 0;
-    background-color: #00462A;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-size: 25px;
-    color: white;
-    border-radius: 7px;
-    transition: 0.3s;
-}
-.btn_login_.modal:hover {
-    color: #00462A;
-    background-color: #E5ECEA;
-    border-color: #E5ECEA;
-}
-
-.btn_user {
-    border: none;
-    background: none;
-}
-
-/* -------------------- input -------------------- */
-
-.input_login {
-    width: 200px;
-    height: 30px;
-    border-radius: 7px;
-    border-width: 3px;
-    border-color: #00462A;
-    text-align: center;
 }
 
 /* 전체 화면에 스크롤바 제거 */
 .html, body::-webkit-scrollbar {
     display: none;
 }
+/* -------------------- community_read -------------------- */
+.read_table {
+    border: 1px solid #444444;
+    margin-top: 30px;
+}
 
-/* 팝업 스타일 */
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.read_title {
+    height: 45px;
+    font-size: 23px;
+    text-align: center;
+    background-color:#00462A ;
+    color: white;
+    width: 1000px;
+}
 
-  .modal .bg {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-  }
+.read_id {
+    text-align: center;
+    background-color: #E5ECEA;
+    width: 30px;
+    height: 33px;
+}
 
-  .modalBox {
-    position: absolute;
-    background-color: #fff;
-    width: 26%;
-    height: 85%;
-    padding: 15px;
-  }
+.read_id2 {
+    background-color: white;
+    width: 60px;
+    height: 33px;
+    padding-left: 10px;
+}
 
-  .modalBox button {
-    display: block;
-    margin: 0 auto;
-  }
+.read_content {
+    padding: 20px;
+    border-top: 1px solid #00462A ;
+    height: 500px;
+}
 
-  .hidden {
-    display: none;
-  }
+.read_btn {
+    width: 700px;
+    height: 200px;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.read_btn1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    height: 40px;
+    font-size: 15px;
+    text-align: center;
+    background-color:#00462A ;
+    border: 1;
+    border-radius: 15px;
+    color: white;
+}
+.read_comment_input {
+    width: 700px;
+    height: 500px;
+    text-align: center;
+    margin: auto;
+}
+
+.read_text3 {
+    font-weight: bold;
+    float: left;
+    margin-left: 20px;
+}
+
+.read_com_id {
+    width: 100px;
+}
+
+.read_comment {
+    width: 500px;
+}
+/* -------------------- community_index -------------------- */
+table {
+    border-top: 1px solid #00462A;
+    border-collapse: collapse;
+}
+
+tr {
+    border-bottom: 1px solid #00462A;
+    padding: 10px;
+}
+
+td {
+    border-bottom: 1px solid #efefef;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 10px;
+}
+
+table .even {
+    background: #E5ECEA;
+}
+
+.text {
+    text-align: center;
+    padding-top: 20px;
+    color: #000000
+}
+
+.text:hover {
+    text-decoration: underline;
+}
+
+a:link {
+    color: #57A0EE;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+.poster{
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    text-align: center;
+}   
+.board{
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+} 
+.h2_community_title{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: #00462A;
+}
+#writeButton{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 15px;
+    height: 40px;
+    background-color:#00462A ;
+    color: white;
+    border-radius: 5px;
+}
+/* -------------------- community_write -------------------- */
+table.table2 {
+    border-collapse: separate;
+    border-spacing: 1px;
+    text-align: left;
+    line-height: 1.5;
+    border-top: 1px solid #ccc;
+    margin: 20px 10px;
+}
+
+table.table2 tr {
+    width: 50px;
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+}
+
+table.table2 td {
+    width: 100px;
+    padding: 10px;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+}

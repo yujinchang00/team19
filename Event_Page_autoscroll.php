@@ -4,24 +4,24 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Event_Page</title>
-    <link href="Event_Page.css" rel="stylesheet" type="text/css" />
+    <link href="Event_Page.css?ver=1.0" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <div class="div_mainbar">
         <div class="div_logo">
         <hr class="hr_logo">
-        <h1 class="h1_logo">WHO's TT</h1>
+        <h1 class="h1_logo" onclick="location.href='Main_Page.php'">WHO's TT</h1>
         <hr class="hr_logo">
         </div>
         <div class="div_category">
         <nav class="clearfix">
             <ul class="clearfix">
-                <li><a href="">SEASONS</a></li>
-                <li><a href="">OTT SERVICE</a></li>
-                <li><a href="">GENRE</a></li>
-                <li><a href="">EVENT</a></li>
-                <li><a href="">COMMUNITY</a></li>
-                <li><a href="">KOREAN ACTOR</a></li>
+                <li><a onclick="location.href='Season_Page.php'">SEASONS</a></li>
+                <li><a onclick="location.href='Favor_Page.php'">OTT SERVICE</a></li>
+                <li><a onclick="location.href='Genre_Page.php'">GENRE</a></li>
+                <li><a class="text_green" onclick="location.href='Event_Page_autoscroll.php'">EVENT</a></li>
+                <li><a onclick="location.href='Community_Page.php'">COMMUNITY</a></li>
+                <li><a onclick="location.href='Actor_Page.php'">KOREAN ACTOR</a></li>
             </ul>
         </nav>
         </div>
@@ -54,7 +54,7 @@
 
             Autoscroll[i].addEventListener('click',function(e){
             e.preventDefault();
-            document.querySelector('.div_horizontal' + (i + 1)).scrollIntoView(true);
+            document.querySelector('.div_horizontal' + (i + 1)).scrollIntoView({ behavior: 'smooth' });
         });
 
         }
@@ -70,8 +70,10 @@
     <div class="div_movie_section">
 
         <div class="div_horizontal1">
-            <h2 class="h2_text">CHRISTMAS</h2>
-            <h2 class="h2_text">23개{php}</h2> <!-- 크리스마스에 해당하는 영화 갯수 count -->
+            <div class="div_horizontal">
+                <h2 class="h2_text">CHRISTMAS</h2>
+                <h2 class="h2_text">23개{php}</h2> <!-- 크리스마스에 해당하는 영화 갯수 count -->
+            </div>
         </div>
         
         <div class="div_movie_list">
@@ -92,8 +94,10 @@
     <div class="div_movie_section">
         
         <div class="div_horizontal2">
-            <h2 class="h2_text">WEDDING</h2>
-            <h2 class="h2_text">19개{php}</h2>
+            <div class="div_horizontal">
+                <h2 class="h2_text">WEDDING</h2>
+                <h2 class="h2_text">19개{php}</h2>
+            </div>
         </div>
         
         <div class="div_movie_list">
@@ -111,8 +115,10 @@
     <div class="div_movie_section">
         
         <div class="div_horizontal3">
-            <h2 class="h2_text">FAMILY EVENT</h2>
-            <h2 class="h2_text">22개{php}</h2>
+            <div class="div_horizontal">
+                <h2 class="h2_text">FAMILY EVENT</h2>
+                <h2 class="h2_text">22개{php}</h2>
+            </div>
         </div>
         
         <div class="div_movie_list">
@@ -129,8 +135,10 @@
     <div class="div_movie_section">
         
         <div class="div_horizontal4">
-            <h2 class="h2_text">TEACHER'S DAY</h2>
-            <h2 class="h2_text">22개{php}</h2>
+            <div class="div_horizontal">
+                <h2 class="h2_text">TEACHER'S DAY</h2>
+                <h2 class="h2_text">22개{php}</h2>
+            </div>
         </div>
         
         <div class="div_movie_list">
@@ -147,8 +155,10 @@
     <div class="div_movie_section">
         
         <div class="div_horizontal5">
-            <h2 class="h2_text">BIRTHDAY</h2>
-            <h2 class="h2_text">22개{php}</h2>
+            <div class="div_horizontal">
+                <h2 class="h2_text">BIRTHDAY</h2>
+                <h2 class="h2_text">22개{php}</h2>
+            </div>
         </div>
         
         <div class="div_movie_list">

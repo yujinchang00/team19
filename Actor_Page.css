@@ -169,7 +169,12 @@ position: absolute;z-index: 1;
     height: 250px;
     display: inline-block;
     margin-left: 20px;
+    transition: 0.8s;
 }
+.img_movie_list:hover {
+    filter: brightness(0.5);
+}
+
 /* actor page 개별 */
 .left_freq{
     width: 50%;
@@ -236,5 +241,7 @@ position: absolute;z-index: 1;
     border-radius: 5px;
 }
 
-
+.text_green {
+    color: #00462A;
+}
 

@@ -25,6 +25,9 @@
 
 .div_center {
     text-align: center;
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
 }
 
 /* 2개의 컴포넌트를 양쪽에 배치 */
@@ -44,9 +47,9 @@
 }
 
 /* 스크롤바 없애기 */
-.div_movie_list::-webkit-scrollbar {
+/* .div_movie_list::-webkit-scrollbar {
     display: none;
-}
+} */
 
 
 /* -------------------- nav -------------------- */
@@ -138,6 +141,14 @@ position: absolute;z-index: 1;
 
 /* -------------------- text -------------------- */
 
+.text_logo{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: #00462A;
+    text-align: center;
+    line-height: 10px;
+}
+
 .h1_logo{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: italic;
@@ -175,6 +186,11 @@ position: absolute;z-index: 1;
     margin-right: 5px;
 }
 
+.btn_movie_detail {
+    border: 0px solid #00462A;
+    background-color:transparent;
+}
+
 /* -------------------- select -------------------- */
 
 .select_decade {
@@ -192,14 +208,17 @@ position: absolute;z-index: 1;
 /* -------------------- img -------------------- */
 
 .img_movie_list {
-    width: 344px;
-    height: 220px;
+    height: 250px;
     display: inline-block;
     margin-left: 20px;
     flex: 1;
+    transition: 0.8s;
+}
+.img_movie_list:hover {
+    filter: brightness(0.5);
 }
 
 /* 전체 화면에 스크롤바 제거 */
-.html, body::-webkit-scrollbar {
+/* .html, body::-webkit-scrollbar {
     display: none;
-}
+} */

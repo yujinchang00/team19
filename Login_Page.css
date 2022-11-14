@@ -202,6 +202,12 @@ position: absolute;z-index: 1;
     font-size: 25px;
     color: white;
     border-radius: 7px;
+    transition: 0.3s;
+}
+.btn_login:hover {
+    color: #00462A;
+    background-color: #E5ECEA;
+    border-color: #E5ECEA;
 }
 
 /* 로그인 페이지에서 height의 %가 적용되게 하는 부분 */
