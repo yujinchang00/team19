@@ -135,9 +135,10 @@ function actors_movie_genre($mysqli, $query){
     $print_count="[";
     $count=0;
 
-    foreach($genre_count as $count){
+    foreach($genre_count as $g_count){
         if($count>=6) break;
-        $print_count=$print_count."'".$count."',";
+        $print_count=$print_count."'".$g_count."',";
+        $count += 1;
     }
     $print_count=substr($print_count, 0, -1);
     $print_count=$print_count."]";
