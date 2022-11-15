@@ -16,7 +16,12 @@
                 con.style.display = 'none'; 	
             } 
         }
-    </script> 
+    </script>
+    <?php
+      include("./basic_php_files/Main_Page_Layout.php");
+      $rank_arr=array("popularity", "average", "revenue");
+    ?>
+
 </head>
 <body>
     <div id="wrap">
@@ -80,24 +85,8 @@
             데이터가 들어갈 위치: <img class="img_rank_list" src="[실제 데이터]" alt="My Image">
             비고: X
         -->
-        <div class="div_rank_list">
-            <div class="div_center">
-                <h2 class="text_rank_green">1</h2>
-                <img class="img_rank_list" src="images/movie1.png" alt="My Image" onclick="location.href='Detail_Page.php'">
-            </div>
-            <div class="div_center">
-                <h2 class="text_rank_green">2</h2>
-                <img class="img_rank_list" src="images/movie1.png" alt="My Image" onclick="location.href='Detail_Page.php'">
-            </div>
-            <div class="div_center">
-                <h2 class="text_rank_green">3</h2>
-                <img class="img_rank_list" src="images/movie1.png" alt="My Image" onclick="location.href='Detail_Page.php'">
-            </div>
-            <div class="div_center">
-                <h2 class="text_rank_green">4</h2>
-                <img class="img_rank_list" src="images/movie1.png" alt="My Image" onclick="location.href='Detail_Page.php'">
-            </div>
-        </div>
+         
+        <?php img_layout($mysqli, $rank_arr[0]) ?>
 
 
         <!-- 별점에 따른 영화 순위 -->
@@ -111,24 +100,7 @@
             데이터가 들어갈 위치: <img class="img_rank_list" src="[실제 데이터]" alt="My Image">
             비고: X
         -->
-        <div class="div_rank_list">
-            <div class="div_center">
-                <h2 class="text_rank_green">1</h2>
-                <img class="img_rank_list" src="images/movie1.png" alt="My Image" onclick="location.href='Detail_Page.php'">
-            </div>
-            <div class="div_center">
-                <h2 class="text_rank_green">2</h2>
-                <img class="img_rank_list" src="images/movie1.png" alt="My Image" onclick="location.href='Detail_Page.php'">
-            </div>
-            <div class="div_center">
-                <h2 class="text_rank_green">3</h2>
-                <img class="img_rank_list" src="images/movie1.png" alt="My Image" onclick="location.href='Detail_Page.php'">
-            </div>
-            <div class="div_center">
-                <h2 class="text_rank_green">4</h2>
-                <img class="img_rank_list" src="images/movie1.png" alt="My Image" onclick="location.href='Detail_Page.php'">
-            </div>
-        </div>
+        <?php img_layout($mysqli, $rank_arr[1]) ?>
 
 
         <!-- 수익에 따른 영화 순위 -->
@@ -143,24 +115,7 @@
             데이터가 들어갈 위치: <img class="img_rank_list" src="[실제 데이터]" alt="My Image">
             비고: X
         -->
-        <div class="div_rank_list">
-            <div class="div_center">
-                <h2 class="text_rank_green">1</h2>
-                <img class="img_rank_list" src="images/movie1.png" alt="My Image" onclick="location.href='Detail_Page.php'">
-            </div>
-            <div class="div_center">
-                <h2 class="text_rank_green">2</h2>
-                <img class="img_rank_list" src="images/movie1.png" alt="My Image" onclick="location.href='Detail_Page.php'">
-            </div>
-            <div class="div_center">
-                <h2 class="text_rank_green">3</h2>
-                <img class="img_rank_list" src="images/movie1.png" alt="My Image" onclick="location.href='Detail_Page.php'">
-            </div>
-            <div class="div_center">
-                <h2 class="text_rank_green">4</h2>
-                <img class="img_rank_list" src="images/movie1.png" alt="My Image" onclick="location.href='Detail_Page.php'">
-            </div>
-        </div>
+        <?php img_layout($mysqli, $rank_arr[2]) ?>
     </div>
 
     <!-- modal 영역 -->
