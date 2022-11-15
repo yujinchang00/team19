@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Main_Page</title>
-    <link href="Main_Page.css?ver=1.04" rel="stylesheet" type="text/css" />
+    <link href="Main_Page.css?ver=1.05" rel="stylesheet" type="text/css" />
 
     <!-- 사용자 이미지 누르면 정보 띄우기 -->
     <script type="text/javascript"> 

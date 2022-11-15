@@ -39,7 +39,7 @@ $val_count = mysqli_num_rows($movie_list);
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>OTT_Page</title>
-    <link href="OTT_Page.css?ver=1.0" rel="stylesheet" type="text/css" />
+    <link href="OTT_Page.css?ver=1.02" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <!-- 메인바 -->
@@ -76,9 +76,10 @@ $val_count = mysqli_num_rows($movie_list);
     <!-- 사용자가 선택한 OTT에 따른 영화를 보여주는 section -->
     <div class="div_ott_section">
         <h2 class="text_subtitle"><?php echo 'We Recommend You "'.$text . '"';?></h2>
+        <button type="submit" class="btn_submit">DELETE</button>
     </div>
 
-    <div class="div_ottmovie_section">
+    <div class="div_center">
 
         <!-- 
             데이터: 영화 포스터 이미지
@@ -101,7 +102,7 @@ while($movie=mysqli_fetch_array($movie_list,MYSQLI_ASSOC)) {
   $line_changer = $line_changer + 1;
   if ($line_changer % 4 == 0) {
     echo '</div>
-    <div class="div_ottmovie_section">';
+    <div class="div_center">';
   }
 }
     echo '</div>';
