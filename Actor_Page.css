@@ -229,6 +229,13 @@ position: absolute;z-index: 1;
     text-align: left;
     
 }
+.average{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: #00462A;
+    text-align: center;
+    
+}
 .div_inputwrapper{
     background-color: #F0F0F0;
     padding: 15px;
