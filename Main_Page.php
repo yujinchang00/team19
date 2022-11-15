@@ -59,7 +59,7 @@
 
         </div>
 
-        <?php 
+        <?php
         $text="로그인이 필요해요 :)";
         if($login){
             $_class_login="btn_login";
@@ -271,32 +271,31 @@
                     <h1 class="text_logo">WHO's TT</h1>
                     <hr class="hr_logo">
                 </div>
-                <form action="./basic_php_files/modify.php">
+                <form action="./basic_php_files/modify.php" method="POST" id="modify">
                 <br>
                 <hr class="hr_division">
 
                 <div class="div_horizontal">
                     <p class="text_green2">이름</p>
-                    <
-                        <input class="input_login" type="text" size="15" placeholder="NEW NAME">
-                    </form>
+                    
+                        <input class="input_login" name="user_name" type="text" size="15" placeholder="NEW NAME">
+    
                 </div>
                 
                 <div class="div_horizontal">
                     <p class="text_green2">비밀번호</p>
-                    <form>
-                        <input class="input_login" type="password" size="15" placeholder="NEW PW">
-                    </form>
+                    
+                        <input class="input_login" name="_password" type="password" size="15" placeholder="NEW PW">
+                    
                 </div>
 
                 <div class="div_horizontal">
                     <p class="text_green2">이메일</p>
-                    <form>
-                        <input class="input_login" type="password" size="15" placeholder="NEW EMAIL">
-                    </form>
+                        <input class="input_login" name="user_email" type="password" size="15" placeholder="NEW EMAIL">    
                 </div>
+            </form>
 
-                <button class="btn_login_modal" type="submit">Confirm</button>
+                <button class="btn_login_modal" type="submit" form="modify">Confirm</button>
             </div>
 
         </div>
