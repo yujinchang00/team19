@@ -23,9 +23,9 @@
         
         $sql1 = "select * from movies_ott where release_date"; /* 날짜 조건 넣기 */
         $movie_list=mysqli_query($mysql, $sql1 . " between '" . $starting . "-01-01' and '" . $ending . "-12-31'");
-        if ($starting== 0 ) {
+        if ($starting == 0 ) {
             $text='~'.$ending;
-        } if($ending % 5 != 0) {
+        } elseif($ending % 5 != 0) {
             $text=$starting . '~';
         } else {
             $text=$starting . '~' . $ending;
