@@ -64,7 +64,7 @@
         if($login){
             $_class_login="btn_login";
             $_class_not_login="hidden";
-            $text="환영합니다:)";
+            $text=$_SESSION['user_name']."님 환영합니다:)";
         }
         else{
             $_class_login="hidden";
@@ -272,6 +272,7 @@
                     <hr class="hr_logo">
                 </div>
                 <form action="./basic_php_files/modify.php" method="POST" id="modify">
+                    <input type="hidden" name="modify_n_url" value="Main_Page.php"/>
                 <br>
                 <hr class="hr_division">
 
@@ -291,7 +292,7 @@
 
                 <div class="div_horizontal">
                     <p class="text_green2">이메일</p>
-                        <input class="input_login" name="user_email" type="password" size="15" placeholder="NEW EMAIL">    
+                        <input class="input_login" name="user_email" type="text" size="15" placeholder="NEW EMAIL">    
                 </div>
             </form>
 

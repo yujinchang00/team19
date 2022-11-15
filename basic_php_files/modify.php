@@ -17,6 +17,9 @@
       echo "회원정보가 변경되었습니다.";
 
       $_SESSION[ 'user_name' ]=$_POST["user_name"];
+      $link = $_POST['modify_n_url'];
+      header('Location: ../'.$link);
+      die();
 ?>      
 
   </body>
