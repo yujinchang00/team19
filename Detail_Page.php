@@ -9,7 +9,7 @@ if($eng) {
     $movie = mysqli_fetch_array($result);
     $poster = mysqli_fetch_array($poster_res);
 } else {
-    $sql = 'select * as release_year from movies_korean where mid = '.$_GET['movie_id'];
+    $sql = 'select * from movies_korean where mid = '.$_GET['movie_id'];
     $poster_sql = 'select * from movies_kor_poster where mid = '.$_GET['movie_id'];
     $result = mysqli_query($mysqli, $sql);
     $poster_res = mysqli_query($mysqli, $poster_sql);
@@ -41,7 +41,7 @@ if($eng) {
                 <li><a onclick="location.href='Genre_Page.php'">GENRE</a></li>
                 <li><a onclick="location.href='Event_Page_autoscroll.php'">EVENT</a></li>
                 <li><a onclick="location.href='Community_Page.php'">COMMUNITY</a></li>
-                <li><a onclick="location.href='Actor_Page.php'">KOREAN ACTOR</a></li>
+                <li><a onclick="location.href='initial_actor_page.php'">KOREAN ACTOR</a></li>
             </ul>
         </nav>
         </div>
