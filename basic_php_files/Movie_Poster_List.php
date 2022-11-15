@@ -4,13 +4,12 @@ include 'mysql_connect.php';
 
 
 /* 찾아지는 movie_list에서 poster 띄워주는 함수 */
-function movie_poster_list($mysql, $movie_list, $text, $ind, $class_name, $button_class) {
-  $val_count = mysqli_num_rows($movie_list);
+function movie_poster_list($mysql, $movie_list, $movie_count, $text, $ind, $class_name, $button_class) {
   echo '
   <div class="div_horizontal' . $ind . '">
     <div class="div_horizontal">
       <h2 class="'. $class_name .'">' . $text .'</h2>
-      <h2 class="'. $class_name .'">' . $val_count .'개</h2>
+      <h2 class="'. $class_name .'">' . $movie_count .'개</h2>
     </div>
   </div>
   <form action="Detail_Page.php" method="get">
