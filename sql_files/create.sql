@@ -1,5 +1,5 @@
 --sql file of creating database and tables
-CREATE DATABASE IF NOT EXISTS team19;
+CREATE DATABASE IF NOT EXISTS team19 DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 use team19;
 
 
