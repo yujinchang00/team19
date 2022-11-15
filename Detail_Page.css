@@ -1,0 +1,139 @@
+.div_mainbar{
+    display: flex;
+    /* align-items: center; */
+}
+.div_logo{
+    margin-left: 2%;
+}
+.div_category{  /* 아래로 정렬 */
+    margin: auto 0 0 2%;
+    /* margin-left: 3%; */
+}
+.div_img{
+    margin: auto 2% 0 auto;
+}
+.hr_logo{
+    width: 250px;
+    height: 2px;
+    background-color: #00462A;
+    color: #00462A;
+    border: 0;
+}
+.h1_logo{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: #00462A;
+    text-align: center;
+    line-height: 10px;
+}
+nav{
+    font-size: 12pt;
+    font-family: Georgia, 'PT Sans', Arial, Sans-serif;
+    position: relative;
+}
+nav ul{
+    padding: 0;
+    margin: 0 auto;
+    width: auto;
+}
+nav li{
+}
+nav a{
+    line-height: 50px;
+    height: 50px;
+}
+nav li a{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+nav li:last-child a{
+    border-right: 0;
+    }
+nav a:hover, nav a:active{
+}
+nav a#pull{
+    display: none;
+}
+html {
+-webkit-touch-callout:none;
+-webkit-user-select:none;
+-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+}
+
+ul{
+/*list-style-type: none;*/
+margin: 0;
+padding: 0;
+text-align: center;
+}
+li{
+/*position: relative;*/
+display: inline-block;
+}
+li a{
+color: #A8A8A8;
+text-align: center;
+padding: 14.5px 16px;
+text-decoration: none;
+}
+li a:hover{
+/*color: #597812;*/
+color: #00462A;
+font-weight:normal;
+}
+.menu {
+width: 5000px;
+height: 50px;
+text-align: center;
+max-width: 100%;
+background-position: center;
+background-size: cover;
+background-color: white;color: rgb(192, 35, 35);
+position: absolute;z-index: 1;
+}
+/* detail page 개별 */
+/* 구역 나누기 */
+.h2_title{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: #00462A;
+    text-align: left;
+    
+}
+.movie_detail{
+    width:100%;
+    box-sizing: border-box;
+}
+.left_detail{
+    width: 40%;
+    float: left;
+    box-sizing: border-box;
+    text-align: center;
+    
+}
+.right_detail{
+    width: 60%;
+    float: left;
+    box-sizing: border-box;
+   
+    
+}
+/* 영화 상세 표 */
+#column {
+    border: 1px ;
+    color: white;
+    background-color:#00462A;
+    text-align:center;
+    }
+#detail {
+    color: black;
+    }
+table {
+    width: 680px;
+    height: 600px;
+    }
+
+    .text_green {
+        color: #00462A;
+    }
