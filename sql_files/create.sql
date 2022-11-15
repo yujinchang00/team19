@@ -99,6 +99,5 @@ CREATE TABLE IF NOT EXISTS user_board (
 -- user_fav_db
 CREATE TABLE IF NOT EXISTS user_fav_db (
     user_id int(11) NOT NULL PRIMARY KEY,
-    mid varchar(100) DEFAULT NULL,
-    rate int(11) DEFAULT NULL CHECK (rate > 0 and rate < 6)
+    mid varchar(100) DEFAULT NULL
 ) DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
