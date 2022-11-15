@@ -60,10 +60,10 @@
             <h2 class="text_login">로그인이 필요해요 :)</h2>
             <hr class="hr_login_division">
             <div class="div_horizontal">
-                <button id="btn_login_id" class="hidden">로그인</button>
-                <button id="btn_register_id" class="hidden">회원가입</button>
-                <button id="btn_modify_id" class="btn_login">정보수정</button>
-                <button id="btn_delete_id" class="btn_login">회원탈퇴</button>
+                <button id="btn_login_id" class="btn_login">로그인</button>
+                <button id="btn_register_id" class="btn_login">회원가입</button>
+                <button id="btn_modify_id" class="hidden">정보수정</button>
+                <button id="btn_delete_id" class="hidden">회원탈퇴</button>
             </div>
         </div>
 
