@@ -1,5 +1,6 @@
 <?php
 include './basic_php_files/mysql_connect.php';
+include("./basic_php_files/session.php");
 
 $ott_name=$_GET['ott_name'];
 
