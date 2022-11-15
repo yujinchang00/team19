@@ -180,12 +180,18 @@ position: absolute;z-index: 1;
     display: none;
 } */
 
+
+
+.text_green {
+    color: #00462A;
+}
 .img_movie_list {
     height: 250px;
     display: inline-block;
     margin-left: 20px;
+    flex: 1;
+    transition: 0.8s;
 }
-
-.text_green {
-    color: #00462A;
+.img_movie_list:hover {
+    filter: brightness(0.5);
 }
