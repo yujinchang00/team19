@@ -10,7 +10,7 @@ if($eng) {
     $poster = mysqli_fetch_array($poster_res);
 } else {
     $sql = 'select * as release_year from movies_korean where mid = '.$_GET['movie_id'];
-    $poster_sql = 'select * from movies_poster_kor where mid = '.$_GET['movie_id'];
+    $poster_sql = 'select * from movies_kor_poster where mid = '.$_GET['movie_id'];
     $result = mysqli_query($mysqli, $sql);
     $poster_res = mysqli_query($mysqli, $poster_sql);
     $movie = mysqli_fetch_array($result);

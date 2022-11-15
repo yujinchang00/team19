@@ -29,3 +29,5 @@ LOAD DATA INFILE '../../htdocs/team19/datacsv/korean_movie_2012_2022.csv' INTO T
 FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' IGNORE 1 ROWS;
 
 -- need loading posters img src of korean movies data
+LOAD DATA INFILE '../../htdocs/team19/datacsv/kor_poster_data.csv' INTO TABLE movies_kor_poster
+FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' IGNORE 1 ROWS;
