@@ -6,6 +6,7 @@
     <title>Actor_Page</title>
     <link href="Actor_Page.css?ver=1.1" rel="stylesheet" type="text/css" />
     
+    <?php include('./basic_php_files/session.php'); ?>
     <?php include("./basic_php_files/mysql_connect.php");?>
     <?php include("./basic_php_files/actor_fn.php");?>
     <?php include("./basic_php_files/actor_page_img_layout.php");?>

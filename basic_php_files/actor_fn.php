@@ -113,9 +113,10 @@ function actors_movie_genre($mysqli, $query){
     $genre_count=[];
 
     $sql="select genres, count(genres) as cnt from movies_korean where mid in 
-        (select mid as id from movies_korean where cast like concat ('%', '".(string)$query."','%')) group by genres;";
+        (select mid as id from movies_korean where cast like concat ('%', '".(string)$query."','%')) group by genres order by cnt DESC;";
     $res=mysqli_query($mysqli, $sql);
     while($movies=mysqli_fetch_assoc($res)){
+        if($count>=6) break;
         $genre_label[$count]=$movies["genres"];
         $genre_count[$count]=$movies["cnt"];
         $count+=1;
@@ -135,9 +136,10 @@ function actors_movie_genre($mysqli, $query){
     $print_count="[";
     $count=0;
 
-    foreach($genre_count as $count){
+    foreach($genre_count as $g_count){
         if($count>=6) break;
-        $print_count=$print_count."'".$count."',";
+        $print_count=$print_count."'".$g_count."',";
+        $count += 1;
     }
     $print_count=substr($print_count, 0, -1);
     $print_count=$print_count."]";
