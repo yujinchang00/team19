@@ -78,7 +78,7 @@
         </div>
     </div> 
         <?php actors_movie_genre($mysqli, $_POST["input_event"]);  ?> 
-         <?php actors_movie_year($mysqli, $_POST["input_event"] ); ?>
+        <?php actors_movie_year($mysqli, $_POST["input_event"] ); ?>
 <!--    <div class="div_stat">
         <div class="div_horizontal_left">
             <h2 class="h2_text">Statistics By Genre</h2>
