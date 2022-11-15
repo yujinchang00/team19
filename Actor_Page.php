@@ -6,6 +6,7 @@
     <title>Actor_Page</title>
     <link href="Actor_Page.css?ver=1.1" rel="stylesheet" type="text/css" />
     
+    <?php include('./basic_php_files/session.php'); ?>
     <?php include("./basic_php_files/mysql_connect.php");?>
     <?php include("./basic_php_files/actor_fn.php");?>
     <?php include("./basic_php_files/actor_page_img_layout.php");?>
@@ -78,7 +79,7 @@
         </div>
     </div> 
         <?php actors_movie_genre($mysqli, $_POST["input_event"]);  ?> 
-        <?php actors_movie_year($mysqli, $_POST["input_event"] ); ?>
+         <?php actors_movie_year($mysqli, $_POST["input_event"] ); ?>
 <!--    <div class="div_stat">
         <div class="div_horizontal_left">
             <h2 class="h2_text">Statistics By Genre</h2>

@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width" />
     <title>Main_Page</title>
     <link href="Main_Page.css?ver=1.04" rel="stylesheet" type="text/css" />
+    <?php include('./basic_php_files/session.php'); ?>
+
+
 
     <!-- 사용자 이미지 누르면 정보 띄우기 -->
     <script type="text/javascript"> 
@@ -56,14 +59,29 @@
 
         </div>
 
+        <?php $login=True;
+        $text="로그인이 필요해요 :)";
+        if($login){
+            $_class_login="btn_login";
+            $_class_not_login="hidden";
+            $text="환영합니다:)";
+        }
+        else{
+            $_class_login="hidden";
+            $_class_not_login="btn_login";
+        }
+        ?>
+        
+
         <div class="div_login" id="div_login_id">
-            <h2 class="text_login">로그인이 필요해요 :)</h2>
+            <h2 class="text_login"><?=$text?></h2>
+
             <hr class="hr_login_division">
             <div class="div_horizontal">
-                <button id="btn_login_id" class="btn_login">로그인</button>
-                <button id="btn_register_id" class="btn_login">회원가입</button>
-                <button id="btn_modify_id" class="hidden">정보수정</button>
-                <button id="btn_delete_id" class="hidden">회원탈퇴</button>
+                <button id="btn_login_id" class="<?=$_class_not_login ?> ">로그인</button>
+                <button id="btn_register_id" class="<?=$_class_not_login ?>">회원가입</button>
+                <button id="btn_modify_id" class="<?=$_class_login ?>">정보수정</button>
+                <button id="btn_delete_id" class="<?=$_class_login ?>">회원탈퇴</button>
             </div>
         </div>
 
@@ -143,25 +161,28 @@
                 <hr class="hr_division">
 
                 <!-- id 입력 -->
+                <form action="./basic_php_files/login_result.php" method="POST" id="login_form">
                 <div class="div_horizontal">
                     <h2 class="text_green2">ID</h2>
-                    <form>
-                        <input class="input_login" type="text" size="15" placeholder="사용자의 ID를 입력하세요.">
-                    </form>
+                    
+                        <input class="input_login" name="user_name" type="text" size="15" placeholder="사용자의 ID를 입력하세요.">
+                    
                 </div>
                 
                 <!-- pw 입력 -->
                 <div class="div_horizontal">
                     <h2 class="text_green2">PW</h2>
-                    <form>
-                        <input class="input_login" type="password" size="15" placeholder="사용자의 PW를 입력하세요.">
-                    </form>
+                    
+                        <input class="input_login" name="_password" type="password" size="15" placeholder="사용자의 PW를 입력하세요.">
+                
                 </div>
 
                 <br>
+                
                 <!-- 로그인 버튼 -->
-                <button class="btn_login_modal" type="submit">LOGIN</button>
-
+                </form>
+                <button class="btn_login_modal" type="submit" form="login_form">LOGIN</button>
+                
                 <br>
 
                 <!-- 아이디/비밀번호 찾기 -->
@@ -199,37 +220,38 @@
                 </div>
 
                 <br>
+                <form action="./basic_php_files/register.php" method="POST" id="register">
                 <hr class="hr_division">
 
                 <div class="div_horizontal">
                     <p class="text_green2">이름</p>
-                    <form>
-                        <input class="input_login" type="text" size="15" placeholder="사용자의 이름를 입력하세요.">
-                    </form>
+                    
+                        <input class="input_login" name="user_name" type="text" size="15" placeholder="사용자의 이름를 입력하세요.">
+                 
                 </div>
                 
                 <div class="div_horizontal">
                     <p class="text_green2">비밀번호</p>
-                    <form>
-                        <input class="input_login" type="password" size="15" placeholder="사용자의 비밀번호를 입력하세요.">
-                    </form>
+               
+                        <input class="input_login" name="_password" type="password" size="15" placeholder="사용자의 비밀번호를 입력하세요.">
+                   
                 </div>
 
                 <div class="div_horizontal">
                     <p class="text_green2">비밀번호 확인</p>
-                    <form>
-                        <input class="input_login" type="password" size="15" placeholder="비밀번호를 한 번 더 입력하세요.">
-                    </form>
+                    
+                        <input class="input_login" name="check_password" type="password" size="15" placeholder="비밀번호를 한 번 더 입력하세요.">
+                    
                 </div>
 
                 <div class="div_horizontal">
                     <p class="text_green2">이메일</p>
-                    <form>
-                        <input class="input_login" type="password" size="15" placeholder="사용자의 이메일을 입력하세요.">
-                    </form>
+                    
+                        <input class="input_login" name="user_email" type="text" size="15" placeholder="사용자의 이메일을 입력하세요.">
+                
                 </div>
-
-                <button class="btn_login_modal" type="submit">Confirm</button>
+                </form>    
+                <button class="btn_login_modal" type="submit" form="register">Confirm</button>
             </div>
 
         </div>
@@ -251,13 +273,13 @@
                     <h1 class="text_logo">WHO's TT</h1>
                     <hr class="hr_logo">
                 </div>
-
+                <form action="./basic_php_files/modify.php">
                 <br>
                 <hr class="hr_division">
 
                 <div class="div_horizontal">
                     <p class="text_green2">이름</p>
-                    <form>
+                    <
                         <input class="input_login" type="text" size="15" placeholder="NEW NAME">
                     </form>
                 </div>
