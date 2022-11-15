@@ -2,6 +2,11 @@
 CREATE DATABASE IF NOT EXISTS team19;
 use team19;
 
+
+------------------------------------------------------------------------
+-------------------------- tables for movies ---------------------------
+------------------------------------------------------------------------
+
 -- creating table of movies in ott (all movies)
 CREATE TABLE IF NOT EXISTS movies_ott(
     mid INTEGER, netflix INTEGER,amazon_prime INTEGER, disney_plus INTEGER, hulu INTEGER,
@@ -67,36 +72,33 @@ CREATE TABLE IF NOT EXISTS movies_korean(
     release_data VARCHAR(50), etc TEXT
 ) DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 
--- 테이블 구조 user_board
---
+-- korean movie poster
+CREATE TABLE IF NOT EXISTS movies_kor_poster(
+    mid INTEGER, img_src VARCHAR(150)
+) DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 
-CREATE TABLE IF NOT EXISTS user_board (
-  user_id int(11) NOT NULL,
-  user_name varchar(20) NOT NULL,
-  board_id int(11) NOT NULL,
-  last_chg_date datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+------------------------------------------------------------------------
+--------------------------- tables for users ---------------------------
+------------------------------------------------------------------------
 
--- --------------------------------------------------------
-
---
--- 테이블 구조 `user_db`
---
-
+-- user_db
 CREATE TABLE IF NOT EXISTS user_db (
-  user_id int(11) NOT NULL,
-  `_password` int(11) NOT NULL,
-  `user_name` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+    user_id int(11) NOT NULL,
+    _password int(11) NOT NULL,
+    user_name varchar(20) NOT NULL
+) DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 
--- --------------------------------------------------------
+-- user_board
+CREATE TABLE IF NOT EXISTS user_board (
+    user_id int(11) NOT NULL,
+    user_name varchar(20) NOT NULL,
+    board_id int(11) NOT NULL,
+    last_chg_date datetime NOT NULL
+) DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 
---
--- 테이블 구조 `user_fav_db`
---
-
-CREATE TABLE IF NOT EXISTS `user_fav_db` (
-  `user_id` int(11) NOT NULL PRIMARY KEY,
-  `mid` varchar(100) DEFAULT NULL,
-  `rate` int(11) DEFAULT NULL CHECK (`rate` > 0 and `rate` < 6)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+-- user_fav_db
+CREATE TABLE IF NOT EXISTS user_fav_db (
+    user_id int(11) NOT NULL PRIMARY KEY,
+    mid varchar(100) DEFAULT NULL,
+    rate int(11) DEFAULT NULL CHECK (rate > 0 and rate < 6)
+) DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;

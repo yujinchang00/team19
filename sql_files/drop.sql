@@ -7,3 +7,6 @@ drop table movies_disney_plus;
 drop table movies_hulu;
 drop table movies_poster;
 drop table movies_korean;
+drop table user_db;
+drop table user_board;
+drop table user_fav_db;

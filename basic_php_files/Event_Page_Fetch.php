@@ -27,7 +27,8 @@ function event_poster($mysql, $text, $ind, $class_name, $button_class) {
       break;
   }
 
-  $movie_list=mysqli_query($mysql, $sql1);
-  movie_poster_list($mysql, $movie_list,  $text, $ind, $class_name, $button_class);
+  $movie_list=mysqli_query($mysql, $sql1);  
+  $movie_count = mysqli_num_rows($movie_list);
+  movie_poster_list($mysql, $movie_list, $movie_count, $text, $ind, $class_name, $button_class);
 }
 ?>

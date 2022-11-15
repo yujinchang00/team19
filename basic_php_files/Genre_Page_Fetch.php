@@ -27,7 +27,8 @@
 
       $sql1 = "select * from movies_ott where (genres_1 in " . $genre_list . ") or (genres_2 in " . $genre_list . ") or (genres_3 in " . $genre_list .")"; /* 날짜 조건 넣기 */
       $sql2 = "select count(*) from movies_ott where genres_1 = " . $genre_list . " or genres_2 = " . $genre_list . " or genres_3 = " . $genre_list; /* 여기도 */
-      $movie_list=mysqli_query($mysql, $sql1);
-      movie_poster_list($mysql, $movie_list,  $text, $ind, $class_name, $button_class);
+      $movie_list=mysqli_query($mysql, $sql1);      
+      $movie_count = mysqli_num_rows($movie_list);
+      movie_poster_list($mysql, $movie_list, $movie_count, $text, $ind, $class_name, $button_class);
   }
 ?>
