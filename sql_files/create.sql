@@ -83,9 +83,10 @@ CREATE TABLE IF NOT EXISTS movies_kor_poster(
 
 -- user_db
 CREATE TABLE IF NOT EXISTS user_db (
-    user_id int(11) NOT NULL,
+    user_id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user_name varchar(20) NOT NULL,
     _password int(11) NOT NULL,
-    user_name varchar(20) NOT NULL
+    user_email varchar(50) NOT NULL
 ) DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 -- user_board

@@ -1,3 +1,4 @@
+<?php include('./basic_php_files/session.php'); ?>
 <?php include './basic_php_files/Genre_Page_Fetch.php' ?>
 
 
