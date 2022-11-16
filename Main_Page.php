@@ -33,6 +33,7 @@
         <div class="div_mainbar">
             <div class="div_logo">
                 <hr class="hr_logo">
+
                 <h1 class="text_logo" onclick="location.href='Main_Page.php'">WHO's TT</h1>
                 <hr class="hr_logo">
             </div>
@@ -46,7 +47,7 @@
                         <li><a onclick="location.href='Genre_Page.php'">GENRE</a></li>
                         <li><a onclick="location.href='Event_Page_autoscroll.php'">EVENT</a></li>
                         <li><a onclick="location.href='Community_Page.php'">COMMUNITY</a></li>
-                        <li><a onclick="location.href='initial_actor_page.php'">KOREAN ACTOR</a></li>
+                        <li><a onclick="location.href='Actor_page.php'">KOREAN ACTOR</a></li>
                     </ul>
                 </nav>
             </div>
