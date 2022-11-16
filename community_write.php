@@ -59,17 +59,23 @@
                     <table class="table2">
                         <tr>
                             <td>Name</td>
-                            <td><input type="text" name="name" size=30></td>
+                            <form method="POST" id="name_post" action=<?=$_SERVER['PHP_SELF']?>></form>
+                            <td><input type="text" name="name" size=30 form ="name_post"></td>
+
                         </tr>
 
                         <tr>
                             <td>Title</td>
-                            <td><input type="text" name="title" size=70></td>
+                            <form method="POST" id="title_post" action=<?=$_SERVER['PHP_SELF']?>></form>
+                            <td><input type="text" name="title" size=70 form="title_post"></td>
+
                         </tr>
 
                         <tr>
                             <td>Content</td>
-                            <td><textarea name="content" cols=75 rows=15></textarea></td>
+                            <form method="POST" id="content_post" action=<?=$_SERVER['PHP_SELF']?>>
+                            <td><textarea name="content" cols=75 rows=15 form="content_post"></textarea></td>
+
                         </tr>
 
                         <!-- <tr>
