@@ -128,12 +128,16 @@ position: absolute;z-index: 1;
     }
 #detail {
     color: black;
+
     }
 table {
     width: 680px;
     height: 600px;
     }
 
-    .text_green {
+.text_green {
         color: #00462A;
     }
+.detail_title{
+    text-align: center;
+}    

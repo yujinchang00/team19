@@ -24,6 +24,13 @@
     text-align: center;
     line-height: 10px;
 }
+.recent_keyword_title{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: #00462A;
+    text-align: center;
+    line-height: 10px;
+}
 nav{
     font-size: 12pt;
     font-family: Georgia, 'PT Sans', Arial, Sans-serif;
@@ -125,6 +132,10 @@ position: absolute;z-index: 1;
     margin-left: 5px;
     margin-right: 5px;
 }
+.btn_movie_detail {
+    border: 0px solid #00462A;
+    background-color:transparent;
+}
 
 .div_horizontal {
     display: flex;
@@ -161,9 +172,9 @@ position: absolute;z-index: 1;
 }
 
 /* 스크롤바 없애기 */
-.div_movie_list::-webkit-scrollbar {
+/*.div_movie_list::-webkit-scrollbar {
     display: none;
-}
+} */
 
 .img_movie_list {
     height: 250px;
@@ -218,6 +229,13 @@ position: absolute;z-index: 1;
     text-align: left;
     
 }
+.average{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: #00462A;
+    text-align: center;
+    
+}
 .div_inputwrapper{
     background-color: #F0F0F0;
     padding: 15px;
@@ -236,6 +254,15 @@ position: absolute;z-index: 1;
     font-size: 32px;
     width: 172px;
     height: 45px;
+    background-color:#00462A ;
+    color: white;
+    border-radius: 5px;
+}
+.delete_keyword{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 12px;
+    height: 20px;
     background-color:#00462A ;
     color: white;
     border-radius: 5px;
