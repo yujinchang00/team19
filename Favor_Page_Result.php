@@ -7,10 +7,15 @@ $fav_set=implode("', '", $fav_mids_list);
 $fav_string = implode(", ", $fav_mids_list);
 
 #user_id 임시 지정
-$user_id = 1;
+if ($login) {
+    $user_name = $_SESSION['user_name'];
+    $user_find_sql = "select * from user_db where user_name = '".$user_name."'";
+    $res = mysqli_query($mysqli, $user_find_sql);
+    $user_id = mysqli_fetch_array($res);
+    $user_fav_sql = "insert into user_fav_db (user_id, mid) values ('".$user_id['user_id']."', '".$fav_string."') on duplicate key update mid = '".$fav_string."'";
+    $user_fav_db_update = mysqli_query($mysqli, $user_fav_sql);
+}
 
-$user_fav_sql = "insert into user_fav_db (user_id, mid) values ('".$user_id."', '".$fav_string."') on duplicate key update mid = '".$fav_string."'";
-$user_fav_db_update = mysqli_query($mysqli, $user_fav_sql);
 $sql = "select sum(netflix) as netflix, sum(amazon_prime) as amazon_prime, sum(disney_plus) as disney_plus, sum(hulu) as hulu from movies_ott where mid in ('".$fav_set."')" ;
 $fav_count_list=mysqli_query($mysqli, $sql);
 $fetched_fav=mysqli_fetch_array($fav_count_list);
@@ -40,7 +45,7 @@ $val_count = mysqli_num_rows($movie_list);
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>OTT_Page</title>
-    <link href="OTT_Page.css?ver=1.0" rel="stylesheet" type="text/css" />
+    <link href="OTT_Page.css?ver=1.02" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <!-- 메인바 -->
@@ -77,9 +82,13 @@ $val_count = mysqli_num_rows($movie_list);
     <!-- 사용자가 선택한 OTT에 따른 영화를 보여주는 section -->
     <div class="div_ott_section">
         <h2 class="text_subtitle"><?php echo 'We Recommend You "'.$text . '"';?></h2>
+        <form action='Favor_Page_Del.php' method="POST" id="fav_del_form">
+            <input type="hidden" name="fav_n_url" value="Favor_Page.php"/>
+        </form>
+        <button type="submit" class="btn_submit" form="fav_del_form">DELETE</button>
     </div>
 
-    <div class="div_ottmovie_section">
+    <div class="div_center">
 
         <!-- 
             데이터: 영화 포스터 이미지
@@ -102,7 +111,7 @@ while($movie=mysqli_fetch_array($movie_list,MYSQLI_ASSOC)) {
   $line_changer = $line_changer + 1;
   if ($line_changer % 4 == 0) {
     echo '</div>
-    <div class="div_ottmovie_section">';
+    <div class="div_center">';
   }
 }
     echo '</div>';

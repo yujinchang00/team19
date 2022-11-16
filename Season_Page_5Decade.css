@@ -17,7 +17,7 @@
 
 .div_button {
     width:96%; 
-    height: 320px; 
+    height: 350px; 
     background-color: #F7F7F7;
     border-radius: 1em;
     margin: 20px auto 20px auto;
@@ -39,7 +39,6 @@
 
 .div_movie_list {
     width: 96%;
-    height: 250px;
     overflow: auto;
     white-space: nowrap;
     margin: 20px auto 20px auto;
@@ -47,9 +46,9 @@
 }
 
 /* 스크롤바 없애기 */
-.div_movie_list::-webkit-scrollbar {
+/* .div_movie_list::-webkit-scrollbar {
     display: none;
-}
+} */
 
 
 /* -------------------- nav -------------------- */
@@ -218,6 +217,6 @@ position: absolute;z-index: 1;
 }
 
 /* 전체 화면에 스크롤바 제거 */
-.html, body::-webkit-scrollbar {
+/* .html, body::-webkit-scrollbar {
     display: none;
-}
+} */

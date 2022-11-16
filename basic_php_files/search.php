@@ -1,6 +1,6 @@
 <?php 
   include 'session.php';
-  include "mysql_connect.php";
+
   
 
   function save_query($login, $mysqli, $query){
@@ -32,7 +32,7 @@
 
 
       $update_sql="update user_search_db set search1='".$query."', search2='".$search_list[0]."', search3='".$search_list[1].
-      "', search4='".$search_list[2]."', search5='".$search_list[3]."';";
+      "', search4='".$search_list[2]."', search5='".$search_list[3]."' where user_id='".$user_id."';";
       
       $find_user_res=mysqli_query($mysqli, $find_user_sql);
       if($login){

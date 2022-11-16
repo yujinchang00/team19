@@ -302,6 +302,11 @@ position: absolute;z-index: 1;
     background: none;
 }
 
+.btn_movie_detail {
+    border: 0px solid #00462A;
+    background-color:transparent;
+}
+
 /* -------------------- input -------------------- */
 
 .input_login {
