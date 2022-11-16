@@ -1,3 +1,4 @@
+<?php include('./basic_php_files/session.php'); ?>
 <?php include './basic_php_files/Genre_Page_Fetch.php' ?>
 
 
@@ -7,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Genre_Page</title>
-    <link href="Genre_Page.css?ver=1.1" rel="stylesheet" type="text/css" />
+    <link href="Genre_Page.css?ver=1.01" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <!-- 메인바 -->

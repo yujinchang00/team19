@@ -1,3 +1,4 @@
+<?php include('./basic_php_files/session.php'); ?>
 <?php include './basic_php_files/mysql_connect.php';
 
 if($_GET['lan']=='eng') {$eng=1;} else {$eng=0;}

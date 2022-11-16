@@ -1,2 +1,2 @@
 
-<?php $_POST["input_event"]="현빈";?>
+<?php $_POST["input_event"]="";?>

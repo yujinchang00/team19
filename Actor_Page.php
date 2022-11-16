@@ -6,9 +6,17 @@
     <title>Actor_Page</title>
     <link href="Actor_Page.css?ver=1.1" rel="stylesheet" type="text/css" />
     
+    <?php include('./basic_php_files/session.php'); ?>
     <?php include("./basic_php_files/mysql_connect.php");?>
     <?php include("./basic_php_files/actor_fn.php");?>
     <?php include("./basic_php_files/actor_page_img_layout.php");?>
+    <?php include("./basic_php_files/query_print.php"); ?>
+    <?php include("./basic_php_files/search.php"); ?>
+    <?php include("./basic_php_files/delete.php"); ?>
+    <?php if(!isset($_POST['input_event'])) $_POST["input_event"]="";?>
+
+    
+
 </head>
 <body>
 
@@ -39,19 +47,25 @@
     <div class="div_inputwrapper">
         <h2 class="h2_title">WHO'S THE KOREAN ACTOR YOU ARE INTERESTED IN?</h2>
         <!-- 배우 이름 입력 폼: 검색한 키워드가 korean_actor DB 필터링용으로 사용됨 -->
-        <form action="Actor_Page.php" method="POST" id="eventForm">
-            <input id='searchEvent' type="text" name="input_event" placeholder="search keyword">
-            <input id='searchButton' type="submit" value="ENTER" >
-        </form>
+        <form method="POST" id="eventForm" action=<?=$_SERVER['PHP_SELF']?>></form> 
+            <input id='searchEvent' type="text" name="input_event" placeholder="search keyword" form="eventForm">
+            <input id='searchButton' type="submit" value="ENTER" form="eventForm">
+        
+        <?php  $input_event = $_POST["input_event"];
+         save_query($login, $mysqli, $input_event); ?>
         <br><b class="recent_keyword_title"> Recently Searched</b>
-        <button class="delete_keyword">Delete Keyword</button>
+        <form method="POST" id="deleteform" target="back">     
+        <button class="delete_keyword" form="deleteform">Delete Keyword</button>
+</form>
+        <?php delete_all($mysqli, $_SESSION["user_name"]); ?>
+        
         <table class="recent_keyword_table">
             <tr>
-                <td>현빈</td>
-                <td>김혜수</td>
-                <td>강동원</td>
-                <td>한소희</td>
-                <td>원빈</td>
+                <td></td>
+                <td><?php query_print($mysqli, 1)?></td>
+                <td><?php query_print($mysqli, 2)?></td>
+                <td><?php query_print($mysqli, 3)?></td>
+                <td><?php query_print($mysqli, 4)?></td>
             </tr>
         </table>
     </div>
@@ -67,18 +81,18 @@
             </h2> <!-- 배우 이름 출력 -->
            
             <h2 class="h2_text">
-                <?php find_actors_movie($mysqli, $_POST["input_event"]); ?>
+                <?php find_actors_movie($mysqli, $input_event); ?>
             </h2>
         </div>
         <!-- TABLE: Korean Actor 
         DATA: name={배우이름}에 해당하는 영화의 포스터 url-->
-        <?php a_img_layout($mysqli,$_POST["input_event"] );?>
+        <?php a_img_layout($mysqli,$input_event );?>
 
         <!-- 반복문 종료 -->
         </div>
     </div> 
-        <?php actors_movie_genre($mysqli, $_POST["input_event"]);  ?> 
-         <?php actors_movie_year($mysqli, $_POST["input_event"] ); ?>
+        <?php actors_movie_genre($mysqli, $input_event);  ?> 
+         <?php actors_movie_year($mysqli, $input_event); ?>
 <!--    <div class="div_stat">
         <div class="div_horizontal_left">
             <h2 class="h2_text">Statistics By Genre</h2>

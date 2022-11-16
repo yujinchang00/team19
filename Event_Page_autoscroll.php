@@ -1,3 +1,4 @@
+<?php include('./basic_php_files/session.php'); ?>
 <?php include './basic_php_files/Event_Page_Fetch.php'; ?>
 
 <!DOCTYPE html>
@@ -6,7 +7,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Event_Page</title>
-    <link href="Event_Page.css?ver=1.1" rel="stylesheet" type="text/css" />
+    <link href="Event_Page.css?ver=1.10" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <div class="div_mainbar">

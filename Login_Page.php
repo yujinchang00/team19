@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width" />
     <title>Login_Page</title>
     <link href="Login_Page.css" rel="stylesheet" type="text/css" />
+    <?php include('./basic_php_files/session.php'); ?>
 </head>
 <body>
     

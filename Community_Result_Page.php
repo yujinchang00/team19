@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width" />
     <title>Result_Page</title>
     <link href="Result_Page.css?ver=1.0" rel="stylesheet" type="text/css" />
+    <?php include("./basic_php_files/session.php"); ?>
 </head>
 <body>
     <div class="div_mainbar">

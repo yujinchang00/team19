@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width" />
     <title>Main_Page</title>
     <link href="Community.css" rel="stylesheet" type="text/css" />
+    <?php include("./basic_php_files/session.php"); ?>
 </head>
 <body>
     <div class="div_mainbar">
@@ -58,14 +59,15 @@
                     <table class="table2">
                         <tr>
                             <td>Name</td>
-                            <td><input type="text" name="name" size=30></td>
-                        </tr>
+                            <td><?= $_SESSION["user_name"];?></td>
 
+                        </tr>
+                        <form method="POST" id="community_post" action=<?= $_SERVER['PHP_SELF']?>>
                         <tr>
                             <td>Title</td>
+                            
                             <td><input type="text" name="title" size=70></td>
                         </tr>
-
                         <tr>
                             <td>Content</td>
                             <td><textarea name="content" cols=75 rows=15></textarea></td>
@@ -75,6 +77,8 @@
                             <td>비밀번호</td>
                             <td><input type="password" name="pw" size=15 maxlength=15></td>
                         </tr> -->
+                        </form>
+                        <?php post_community($mysqli, $_POST["title"], $_POST["content"]); ?>
                     </table>
 
                     <center>

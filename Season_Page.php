@@ -1,4 +1,5 @@
 <?php include './basic_php_files/Season_Page_Fetch.php'?>
+<?php include("./basic_php_files/session.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,7 +7,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Season_Page</title>
-    <link href="Season_Page.css?ver=1.1" rel="stylesheet" type="text/css" />
+    <link href="Season_Page.css?ver=1.01" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <!-- 메인바 -->
