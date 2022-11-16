@@ -6,6 +6,7 @@
     <title>Main_Page</title>
     <link href="Community.css" rel="stylesheet" type="text/css" />
     <?php include("./basic_php_files/session.php"); ?>
+    
 </head>
 <body>
     <div class="div_mainbar">
@@ -23,8 +24,8 @@
                 <li><a onclick="location.href='Favor_Page.php'">OTT SERVICE</a></li>
                 <li><a onclick="location.href='Genre_Page.php'">GENRE</a></li>
                 <li><a class="text_green" onclick="location.href='Event_Page_autoscroll.php'">EVENT</a></li>
-                <li><a onclick="location.href='Community_Page.php'">COMMUNITY</a></li>
-                <li><a onclick="location.href='Actor_page.php'">KOREAN ACTOR</a></li>
+                <li><a onclick="location.href='Community_Result_Page.php'">COMMUNITY</a></li>
+                <li><a onclick="location.href='initial_actor_page.php'">KOREAN ACTOR</a></li>
             </ul>
         </nav>
         </div>
