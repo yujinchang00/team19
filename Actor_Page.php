@@ -57,11 +57,12 @@
         <br><b class="recent_keyword_title"> <?php if($login){echo 'Recently Searched';}?></b>
         
         <?php if($login) { ?>       <!--로그인 세션 없으면 delete버튼도 그냥 없어지게 만들었어요-->
-        <form method="POST" id="deleteform" target="back" action="./basic_php_files/delete.php">   
+        <form method="POST" id="deleteform" target="back" action=<?=$_SERVER['PHP_SELF']?>>   
             <input type="hidden" name="clicked" value='True'>  
         </form>
         <button class="delete_keyword" form="deleteform">Delete Keyword</button>
-        <?php }?>
+        <?php }
+        if(isset($_POST['clicked'])) delete_all($mysqli, $_SESSION['user_name']);?>
         
         <table class="recent_keyword_table">
             <tr>
