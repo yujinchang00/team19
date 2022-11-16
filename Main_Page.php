@@ -65,7 +65,7 @@
         if($login){
             $_class_login="btn_login";
             $_class_not_login="hidden";
-            $text="환영합니다:)";
+            $text=$_SESSION['user_name']."님 환영합니다:)";
         }
         else{
             $_class_login="hidden";
@@ -82,7 +82,7 @@
                 <button id="btn_login_id" class="<?=$_class_not_login ?> ">로그인</button>
                 <button id="btn_register_id" class="<?=$_class_not_login ?>">회원가입</button>
                 <button id="btn_modify_id" class="<?=$_class_login ?>">정보수정</button>
-                <button id="btn_delete_id" class="<?=$_class_login ?>">회원탈퇴</button>
+                <button id="btn_delete_id" class="<?=$_class_login ?>">로그아웃</button>
             </div>
         </div>
 
@@ -163,19 +163,17 @@
 
                 <!-- id 입력 -->
                 <form action="./basic_php_files/login_result.php" method="POST" id="login_form">
+                    <input type="hidden" name="login_n_url" value="Main_Page.php">
                 <div class="div_horizontal">
                     <h2 class="text_green2">ID</h2>
-                    
-                        <input class="input_login" name="user_name" type="text" size="15" placeholder="사용자의 ID를 입력하세요.">
+                    <input class="input_login" name="user_name" type="text" size="15" placeholder="사용자의 ID를 입력하세요.">
                     
                 </div>
                 
                 <!-- pw 입력 -->
                 <div class="div_horizontal">
                     <h2 class="text_green2">PW</h2>
-                    
-                        <input class="input_login" name="_password" type="password" size="15" placeholder="사용자의 PW를 입력하세요.">
-                
+                    <input class="input_login" name="_password" type="password" size="15" placeholder="사용자의 PW를 입력하세요.">
                 </div>
 
                 <br>
@@ -275,6 +273,7 @@
                     <hr class="hr_logo">
                 </div>
                 <form action="./basic_php_files/modify.php" method="POST" id="modify">
+                    <input type="hidden" name="modify_n_url" value="Main_Page.php"/>
                 <br>
                 <hr class="hr_division">
 
@@ -294,7 +293,7 @@
 
                 <div class="div_horizontal">
                     <p class="text_green2">이메일</p>
-                        <input class="input_login" name="user_email" type="password" size="15" placeholder="NEW EMAIL">    
+                        <input class="input_login" name="user_email" type="text" size="15" placeholder="NEW EMAIL">    
                 </div>
             </form>
 
@@ -304,7 +303,7 @@
         </div>
     </div>
 
-    <!-- Delete_Page Modal -->
+    <!-- Logout_Page Modal -->
     <div id="id_delete_modal" class="modal hidden">
         <div id="id_delete_bg" class="bg"></div>
         <div class="modalBox">
@@ -313,7 +312,7 @@
             
             <div class="div_vertical_middle">                
                 <hr class="hr_division">
-                <h2 class="text_gray">WANT TP DELETE</h2>
+                <h2 class="text_gray">WANT TO LOGOUT</h2>
 
                 <div class="div_logo">
                     <hr class="hr_logo">
@@ -324,9 +323,11 @@
                 <br>
                 <hr class="hr_division">
                 <br><br>
-                
+                <form action="./basic_php_files/logout.php" method="POST" id="logout_form">
+                    <input type="hidden" name="logout_n_url" value="Main_Page.php"/>
+                </form>
                 <div class="div_horizontal">
-                    <button class="btn_login_modal" type="submit">YES</button>
+                    <button class="btn_login_modal" type="submit" form="logout_form">YES</button>
                     <button class="btn_login_modal" type="submit">NO</button>
                 </div>
             </div>
