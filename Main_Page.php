@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Main_Page</title>
-    <link href="Main_Page.css?ver=1.04" rel="stylesheet" type="text/css" />
+    <link href="Main_Page.css?ver=1.05" rel="stylesheet" type="text/css" />
     <?php include('./basic_php_files/session.php'); ?>
 
 
@@ -274,30 +274,38 @@
                 </div>
                 <form action="./basic_php_files/modify.php" method="POST" id="modify">
                     <input type="hidden" name="modify_n_url" value="Main_Page.php"/>
+                    <br>
+                    <hr class="hr_division">
+
+                    <div class="div_horizontal">
+                        <p class="text_green2">이름</p>
+                        
+                            <input class="input_login" name="user_name" type="text" size="15" placeholder="NEW NAME">
+        
+                    </div>
+                    
+                    <div class="div_horizontal">
+                        <p class="text_green2">비밀번호</p>
+                        
+                            <input class="input_login" name="_password" type="password" size="15" placeholder="NEW PW">
+                        
+                    </div>
+
+                    <div class="div_horizontal">
+                        <p class="text_green2">이메일</p>
+                            <input class="input_login" name="user_email" type="text" size="15" placeholder="NEW EMAIL">    
+                    </div>
+                </form>
+
                 <br>
-                <hr class="hr_division">
-
-                <div class="div_horizontal">
-                    <p class="text_green2">이름</p>
-                    
-                        <input class="input_login" name="user_name" type="text" size="15" placeholder="NEW NAME">
-    
-                </div>
-                
-                <div class="div_horizontal">
-                    <p class="text_green2">비밀번호</p>
-                    
-                        <input class="input_login" name="_password" type="password" size="15" placeholder="NEW PW">
-                    
-                </div>
-
-                <div class="div_horizontal">
-                    <p class="text_green2">이메일</p>
-                        <input class="input_login" name="user_email" type="text" size="15" placeholder="NEW EMAIL">    
-                </div>
-            </form>
-
                 <button class="btn_login_modal" type="submit" form="modify">Confirm</button>
+                <br>
+
+                <!-- 회원탈퇴 -->
+                <div class="div_horizontal">
+                    <p class="text_gray_p">WANT TO DELETE ACCOUNT?</p>
+                    <p class="text_gray_p">HERE</p>
+                </div>
             </div>
 
         </div>
@@ -328,7 +336,7 @@
                 </form>
                 <div class="div_horizontal">
                     <button class="btn_login_modal" type="submit" form="logout_form">YES</button>
-                    <button class="btn_login_modal" type="submit">NO</button>
+                    <button id="id_logout_close" class="btn_login_modal" type="submit">NO</button>
                 </div>
             </div>
 
@@ -360,7 +368,7 @@
             document.querySelector("#id_modify_modal").classList.add("hidden");
         }
 
-        // 탈퇴
+        // 로그아웃
         const delete_open = () => {
             document.querySelector("#id_delete_modal").classList.remove("hidden");
         }
@@ -388,6 +396,7 @@
         // 회원탈퇴 모달창 open OR close
         document.querySelector("#btn_delete_id").addEventListener("click", delete_open);
         document.querySelector("#id_delete_close").addEventListener("click", delete_close);
+        document.querySelector("#id_logout_close").addEventListener("click", delete_close);
         document.querySelector("#id_delete_bg").addEventListener("click", delete_close);
         
 
