@@ -19,10 +19,15 @@
     background-color: #00462A;
     margin: 20px 0 20px 0;
     align-items: center;
+    display: flex;
+    justify-content: space-between;
 }
 
-.div_ottmovie_section {
-    margin-top: 50px;
+.div_center {
+    text-align: center;
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
 }
 
 .div_favor_list {
@@ -31,6 +36,12 @@
     margin: 0px auto 0px auto;
     text-align: center;
     display: flex;
+}
+
+.div_horizontal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /* -------------------- nav -------------------- */
@@ -149,7 +160,6 @@ position: absolute;z-index: 1;
     width: 344px;
     margin-left: 10px;
     margin-right: 10px;
-    flex: 1;
     transition: 0.8s;
 }
 .img_favor_list:hover {
@@ -159,4 +169,26 @@ position: absolute;z-index: 1;
 /* 전체 화면에 스크롤바 제거 */
 .html, body::-webkit-scrollbar {
     display: none;
+}
+
+/* -------------------- btn -------------------- */
+
+.btn_submit {
+    width: 150px;
+    height: 45px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: normal;
+    color: #00462A;
+    font-size: 25px;
+    background-color: #E5ECEA;
+    border-radius: 0.2em;
+    border-color: #00462A;
+    border-width: 3px;
+    margin-right: 50px;
+    transition: 0.3s;
+}
+.btn_submit:hover {
+    color: #E5ECEA;
+    background-color: #00462A;
+    border-color: #E5ECEA;
 }
