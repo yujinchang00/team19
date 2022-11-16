@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Actor_Page</title>
-    <link href="Actor_Page.css?ver=1.1" rel="stylesheet" type="text/css" />
+    <link href="Actor_Page.css?ver=1.10" rel="stylesheet" type="text/css" />
     
     <?php include('./basic_php_files/session.php'); ?>
     <?php include("./basic_php_files/mysql_connect.php");?>
@@ -73,13 +73,13 @@
                     $res = mysqli_query($mysqli, $sql);
                     while($q=mysqli_fetch_array($res, MYSQLI_NUM)){
                         for($i=0;$i<=4;$i++) {
-                            echo '<td>';
+                            echo '<td class="p_text">';
                             if(empty($q[$i])) {echo "";} else {echo $q[$i];}
                             echo '</td>';
                         }
                     }
                 }
-                else { for($i=0;$i<=4;$i++) {echo '<td></td>';}} 
+                else { for($i=0;$i<=4;$i++) {echo '<td class="p_text"></td>';}} 
                 ?>
             </tr>
         </table>

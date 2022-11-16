@@ -181,6 +181,9 @@
                 <!-- 로그인 버튼 -->
                 </form>
                 <button class="btn_login_modal" type="submit" form="login_form">LOGIN</button>
+                <!-- [TESTING] 임의로 둔 코드 -->
+                <br>
+                <button id="btn_result_id" class="btn_login_modal">LOGIN RESULT</button>
                 
                 <br>
 
@@ -305,6 +308,7 @@
                 <div class="div_horizontal">
                     <p class="text_gray_p">WANT TO DELETE ACCOUNT?</p>
                     <p class="text_gray_p">HERE</p>
+
                 </div>
             </div>
 
@@ -343,6 +347,36 @@
         </div>
     </div>
 
+    <!-- Login Result Modal -->
+    <div id="id_result_modal" class="modal hidden">
+        <div id="id_result_bg" class="bg"></div>
+        <div class="modalBox">
+
+        <img id="id_result_close" class="img_btn_close" src="images/btn_close.png" alt="close">
+            
+            <div class="div_vertical_middle">                
+                <hr class="hr_division">
+                <h2 class="text_gray">WELCOME TO</h2>
+
+                <div class="div_logo">
+                    <hr class="hr_logo">
+                    <h1 class="text_logo">WHO's TT</h1>
+                    <hr class="hr_logo">
+                </div>
+
+                <br>
+                <hr class="hr_division">
+                <br><br>
+
+                <h2 class="text_green2">결과 TEXT 자리 입니다.</h2>
+
+                <button id="id_ok_close" class="btn_login_modal" type="submit">OK</button>
+                
+            </div>
+
+        </div>
+    </div>
+
     <script>
         // 로그인
         const login_open = () => {
@@ -376,6 +410,14 @@
             document.querySelector("#id_delete_modal").classList.add("hidden");
         }
 
+        // 로그인/회원가입 결과
+        const result_open = () => {
+            document.querySelector("#id_result_modal").classList.remove("hidden");
+        }
+        const result_close = () => {
+            document.querySelector("#id_result_modal").classList.add("hidden");
+        }
+
         
 
         // 로그인 모달창 open OR close
@@ -398,6 +440,12 @@
         document.querySelector("#id_delete_close").addEventListener("click", delete_close);
         document.querySelector("#id_logout_close").addEventListener("click", delete_close);
         document.querySelector("#id_delete_bg").addEventListener("click", delete_close);
+
+        // 로그인/회원가입 결과 모달창 open OR close
+        document.querySelector("#btn_result_id").addEventListener("click", result_open);
+        document.querySelector("#id_result_close").addEventListener("click", result_close);
+        document.querySelector("#id_ok_close").addEventListener("click", result_close);
+        document.querySelector("#id_result_bg").addEventListener("click", result_close);
         
 
     </script>
