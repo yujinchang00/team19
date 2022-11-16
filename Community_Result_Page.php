@@ -6,6 +6,9 @@
     <title>Result_Page</title>
     <link href="Result_Page.css?ver=1.0" rel="stylesheet" type="text/css" />
     <?php include("./basic_php_files/session.php"); ?>
+    <?php include("./basic_php_files/community_img_layout.php")?>
+    <?php if(!isset($_POST['input_event'])) $_POST["input_event"]="";?>
+     
 </head>
 <body>
     <div class="div_mainbar">
@@ -49,21 +52,9 @@
             <!-- php 검색한 키워드로 검색 결과 노출 기능--> 
             <!-- 테이블, 필드값: movie TABLE image url
             데이터 위치: src= 링크 -->
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/a91e9hpWwfCqxJI4xM9Q2RhuxgI.jpg" alt="My Image" >
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/sLTAEFtjentQ5satiGdmv7o2f1C.jpg" alt="My Image" >
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/mYLOqiStMxDK3fYZFirgrMt8z5d.jpg" alt="My Image" >
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/kGmpIkjVRWHQ97AiEXC0pLt5VtY.jpg" alt="My Image" >
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/a91e9hpWwfCqxJI4xM9Q2RhuxgI.jpg" alt="My Image" >
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/sLTAEFtjentQ5satiGdmv7o2f1C.jpg" alt="My Image" >
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/mYLOqiStMxDK3fYZFirgrMt8z5d.jpg" alt="My Image" >
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/kGmpIkjVRWHQ97AiEXC0pLt5VtY.jpg" alt="My Image" >
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/77OM9jMJ8nglaolHLwrAW7kvadV.jpg" alt="My Image" >
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/S6fDnntDjduIWuLW2GcqFasobD.jpg" alt="My Image" >
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/lM2K5eGz9kvrYRi366wEzVwC8Tb.jpg" alt="My Image" >
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/vctfqwx6YYEml0iVEDxfnTnY2vn.jpg" alt="My Image" >
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/S6fDnntDjduIWuLW2GcqFasobD.jpg" alt="My Image" >
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/lM2K5eGz9kvrYRi366wEzVwC8Tb.jpg" alt="My Image" >
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/vctfqwx6YYEml0iVEDxfnTnY2vn.jpg" alt="My Image" >
+             
+            <?php $query=$_POST["input_event"];
+            community_img_layout($mysqli, $query) ?>
             <!-- 반복문 종료 -->
         </div>
     </div>   

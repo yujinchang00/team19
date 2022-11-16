@@ -6,6 +6,9 @@
     <title>Community_Page</title>
     <link href="Community.css" rel="stylesheet" type="text/css" />
     <?php include("./basic_php_files/session.php"); ?>
+    <?php include("./basic_php_files/community_get.php") ?>
+    <?php include "./basic_php_files/community_board_db.php" ?>
+    
 </head>
 <body>
     <div class="div_mainbar">
@@ -42,8 +45,8 @@
 </html>
 <body>
 <div class=poster>
-    <h2 class="h2_community_title">{MOVIE TITLE}</h2>
-        <img class=detail_img src=https://www.themoviedb.org/t/p/w600_and_h900_bestv2/xr3oGJYQWLunuw7L5myo4VT8DBz.jpg height="500px">
+    <h2 class="h2_community_title"><?=$movie["original_title"] ?></h2>
+        <img class=detail_img src=<?=$poster["img_src"]?> height="500px">
 </div>    
 <div class=board>
     <!-- php 삽입 -->
@@ -58,14 +61,7 @@
             </tr>
         </thead>
 
-        <tbody>
-                    <tr class="even">
-                    <td width="50" align="center">1</td>
-                    <td width="500" align="center"><a href=community_read.php>재밌어요</a></td>
-                    <td width="200" align="center">2022.11.13</td>
-                    <td width="50" align="center">나00</td>
-                    </tr>
-        </tbody>
+        
     </table>
 
     <div class=text>

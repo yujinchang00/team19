@@ -6,6 +6,7 @@
     <title>Main_Page</title>
     <link href="Community.css" rel="stylesheet" type="text/css" />
     <?php include("./basic_php_files/session.php"); ?>
+    
 </head>
 <body>
     <div class="div_mainbar">
